@@ -6,6 +6,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-Light.ttf">
+            <string>Ubuntu-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="homeVC" customModule="Alforno" customModuleProvider="target">
             <connections>
@@ -24,23 +32,73 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pz0-4e-3q9">
                     <rect key="frame" x="0.0" y="52" width="414" height="327"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xii-tm-49Z">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xii-tm-49Z">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-OX-cla">
+                    <rect key="frame" x="16" y="379" width="382" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.039871752259999997" green="0.1271262467" blue="0.1923708022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.8980392157" green="0.16078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-gS-vKI">
+                    <rect key="frame" x="8" y="426" width="63.5" height="20"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                    <color key="textColor" red="0.039871752259999997" green="0.1271262467" blue="0.1923708022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 Dishes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-am-UmJ">
+                    <rect key="frame" x="79.5" y="432.5" width="43" height="11.5"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="10"/>
+                    <color key="textColor" red="0.4392156862745098" green="0.43137254901960786" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COs-4e-iNM">
+                    <rect key="frame" x="344" y="427" width="62" height="22"/>
+                    <state key="normal" title="See All" image="arrow red">
+                        <color key="titleColor" red="0.8980392157" green="0.16078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-Wt-PUg">
+                    <rect key="frame" x="8" y="457" width="398" height="405"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5B-hR-m7x">
+                    <rect key="frame" x="8" y="416" width="398" height="2"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="ijS-fu-RGA"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="5kR-am-UmJ" firstAttribute="leading" secondItem="QOH-gS-vKI" secondAttribute="trailing" constant="8" id="1su-uu-1yQ"/>
                 <constraint firstItem="mSU-MW-udn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.406404" id="5QV-aA-UXw"/>
                 <constraint firstItem="pz0-4e-3q9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="8Pf-TF-Ne1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T5B-hR-m7x" secondAttribute="trailing" constant="8" id="B0T-a2-yhb"/>
                 <constraint firstItem="mSU-MW-udn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CUx-f7-5X5"/>
                 <constraint firstItem="mSU-MW-udn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ClV-3J-sUs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n9l-Wt-PUg" secondAttribute="bottom" id="IZz-Ku-Rgl"/>
+                <constraint firstItem="Ehl-OX-cla" firstAttribute="top" secondItem="pz0-4e-3q9" secondAttribute="bottom" id="JkN-fj-llQ"/>
+                <constraint firstItem="QOH-gS-vKI" firstAttribute="top" secondItem="T5B-hR-m7x" secondAttribute="bottom" constant="8" id="Kjj-ur-6So"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pz0-4e-3q9" secondAttribute="trailing" id="Ky8-T1-5K9"/>
                 <constraint firstItem="mSU-MW-udn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LiU-Ao-eIp"/>
+                <constraint firstItem="n9l-Wt-PUg" firstAttribute="leading" secondItem="T5B-hR-m7x" secondAttribute="leading" id="M8p-sP-jBu"/>
+                <constraint firstItem="COs-4e-iNM" firstAttribute="centerY" secondItem="QOH-gS-vKI" secondAttribute="centerY" constant="2" id="QHb-FQ-wJi"/>
+                <constraint firstItem="T5B-hR-m7x" firstAttribute="top" secondItem="Ehl-OX-cla" secondAttribute="bottom" id="QbU-ot-jiP"/>
+                <constraint firstItem="5kR-am-UmJ" firstAttribute="centerY" secondItem="QOH-gS-vKI" secondAttribute="centerY" constant="2" id="YME-1i-Z2h"/>
+                <constraint firstItem="n9l-Wt-PUg" firstAttribute="top" secondItem="COs-4e-iNM" secondAttribute="bottom" constant="8" id="iMH-rh-fpC"/>
+                <constraint firstItem="COs-4e-iNM" firstAttribute="trailing" secondItem="T5B-hR-m7x" secondAttribute="trailing" id="kj3-7u-kst"/>
+                <constraint firstItem="T5B-hR-m7x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="kxi-xj-s92"/>
+                <constraint firstItem="Ehl-OX-cla" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mOB-dL-lVg"/>
                 <constraint firstItem="pz0-4e-3q9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.364955" id="oBe-iq-n4Z"/>
+                <constraint firstItem="QOH-gS-vKI" firstAttribute="leading" secondItem="T5B-hR-m7x" secondAttribute="leading" id="r5H-DK-FsF"/>
+                <constraint firstItem="n9l-Wt-PUg" firstAttribute="trailing" secondItem="T5B-hR-m7x" secondAttribute="trailing" id="rbl-DS-9H9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ehl-OX-cla" secondAttribute="trailing" constant="16" id="tSJ-tX-e9M"/>
                 <constraint firstItem="pz0-4e-3q9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xjw-Sh-ZAR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -49,5 +107,6 @@
     </objects>
     <resources>
         <image name="Rectangle 8" width="375" height="330"/>
+        <image name="arrow red" width="6" height="10"/>
     </resources>
 </document>

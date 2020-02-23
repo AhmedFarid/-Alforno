@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Light.ttf">
+            <string>Ubuntu-Light</string>
+        </array>
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="193" id="KGk-i7-Jjw" customClass="bopularCell" customModule="Alforno" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="521" height="193"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="521" height="193"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMI-fj-e4d" customClass="coustomRoundedView" customModule="Alforno" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="505" height="177"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pic 1" translatesAutoresizingMaskIntoConstraints="NO" id="I3l-cp-CYO">
+                                <rect key="frame" x="6" y="6" width="192" height="165"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tropical Storm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyS-zz-5M9">
+                                <rect key="frame" x="206" y="32" width="291" height="20"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" red="0.043137254901960784" green="0.12549019607843137" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tropical StormTropical StormTropical StormTropical StormTropical StormTropical StormTropical StormTropical StormTropical Storm" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-Lk-6NM">
+                                <rect key="frame" x="206" y="60" width="291" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43137254899999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cutlery-1" translatesAutoresizingMaskIntoConstraints="NO" id="qoG-ie-vaC">
+                                <rect key="frame" x="206" y="125.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="PJR-wO-aHm"/>
+                                    <constraint firstAttribute="width" constant="25" id="fFh-Y4-tpm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQB-fu-fz4">
+                                <rect key="frame" x="239" y="130" width="258" height="16"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="14"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43137254899999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3M-xy-Zur">
+                                <rect key="frame" x="472.5" y="146" width="24.5" height="24.5"/>
+                                <state key="normal" image="Group 238 no cart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-E7-IrF">
+                                <rect key="frame" x="473" y="8" width="24" height="24"/>
+                                <state key="normal" image="Group 237 no fav"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dmg-Lk-6NM" firstAttribute="leading" secondItem="I3l-cp-CYO" secondAttribute="trailing" constant="8" id="3fH-yT-Vr6"/>
+                            <constraint firstAttribute="trailing" secondItem="dmg-Lk-6NM" secondAttribute="trailing" constant="8" id="42S-8r-42T"/>
+                            <constraint firstItem="aQB-fu-fz4" firstAttribute="leading" secondItem="qoG-ie-vaC" secondAttribute="trailing" constant="8" id="7Bz-h9-NEv"/>
+                            <constraint firstItem="k3M-xy-Zur" firstAttribute="trailing" secondItem="aQB-fu-fz4" secondAttribute="trailing" id="FpU-B0-P0U"/>
+                            <constraint firstAttribute="trailing" secondItem="aQB-fu-fz4" secondAttribute="trailing" constant="8" id="Gmf-Hg-KYr"/>
+                            <constraint firstItem="I3l-cp-CYO" firstAttribute="leading" secondItem="VMI-fj-e4d" secondAttribute="leading" constant="6" id="IRF-nB-KSW"/>
+                            <constraint firstItem="UyS-zz-5M9" firstAttribute="leading" secondItem="I3l-cp-CYO" secondAttribute="trailing" constant="8" id="N6L-Ut-Rho"/>
+                            <constraint firstItem="qoG-ie-vaC" firstAttribute="top" secondItem="dmg-Lk-6NM" secondAttribute="bottom" constant="8" id="OQx-v9-zSP"/>
+                            <constraint firstAttribute="bottom" secondItem="I3l-cp-CYO" secondAttribute="bottom" constant="6" id="Omm-W8-nM3"/>
+                            <constraint firstItem="I3l-cp-CYO" firstAttribute="top" secondItem="VMI-fj-e4d" secondAttribute="top" constant="6" id="SCg-ZD-81K"/>
+                            <constraint firstItem="UyS-zz-5M9" firstAttribute="top" secondItem="ofH-E7-IrF" secondAttribute="bottom" id="T9L-37-oiu"/>
+                            <constraint firstItem="UyS-zz-5M9" firstAttribute="top" secondItem="VMI-fj-e4d" secondAttribute="top" constant="32" id="Y5z-Cl-DJN"/>
+                            <constraint firstItem="aQB-fu-fz4" firstAttribute="centerY" secondItem="qoG-ie-vaC" secondAttribute="centerY" id="YA8-iD-Zh2"/>
+                            <constraint firstItem="dmg-Lk-6NM" firstAttribute="top" secondItem="UyS-zz-5M9" secondAttribute="bottom" constant="8" id="YlG-iX-LEu"/>
+                            <constraint firstItem="k3M-xy-Zur" firstAttribute="top" secondItem="aQB-fu-fz4" secondAttribute="bottom" id="cIo-ld-UfR"/>
+                            <constraint firstItem="qoG-ie-vaC" firstAttribute="leading" secondItem="I3l-cp-CYO" secondAttribute="trailing" constant="8" id="fwF-0V-ygD"/>
+                            <constraint firstAttribute="trailing" secondItem="UyS-zz-5M9" secondAttribute="trailing" constant="8" id="iyc-xa-bOK"/>
+                            <constraint firstItem="ofH-E7-IrF" firstAttribute="trailing" secondItem="UyS-zz-5M9" secondAttribute="trailing" id="kqR-XU-Js6"/>
+                            <constraint firstItem="I3l-cp-CYO" firstAttribute="width" secondItem="VMI-fj-e4d" secondAttribute="width" multiplier="0.380577" id="pkf-n5-BBE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VMI-fj-e4d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="1zi-MU-7DX"/>
+                    <constraint firstItem="VMI-fj-e4d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="3ks-3v-jo1"/>
+                    <constraint firstAttribute="trailing" secondItem="VMI-fj-e4d" secondAttribute="trailing" constant="8" id="4dN-0B-Mk1"/>
+                    <constraint firstAttribute="bottom" secondItem="VMI-fj-e4d" secondAttribute="bottom" constant="8" id="Hzd-l7-veh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="278.98550724637681" y="203.23660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 237 no fav" width="24" height="24"/>
+        <image name="Group 238 no cart" width="24.5" height="24.5"/>
+        <image name="Pic 1" width="330" height="330"/>
+        <image name="cutlery-1" width="75" height="69"/>
+    </resources>
+</document>

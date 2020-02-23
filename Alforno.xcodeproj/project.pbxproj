@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,8 @@
 		6924D80023FC405A00D4494A /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */; };
 		6924D80423FC4A8500D4494A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D80223FC4A8500D4494A /* signUpVC.swift */; };
 		6924D80523FC4A8500D4494A /* signUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6924D80323FC4A8500D4494A /* signUpVC.xib */; };
+		69F328652402C6B8008F06F4 /* bopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F328632402C6B8008F06F4 /* bopularCell.swift */; };
+		69F328662402C6B8008F06F4 /* bopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F328642402C6B8008F06F4 /* bopularCell.xib */; };
 		69FFCA1323FD7BC700F10AD2 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFCA1123FD7BC700F10AD2 /* homeVC.swift */; };
 		69FFCA1423FD7BC700F10AD2 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FFCA1223FD7BC700F10AD2 /* homeVC.xib */; };
 		69FFCA1823FD9F1A00F10AD2 /* homeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */; };
@@ -57,6 +59,8 @@
 		6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
 		6924D80223FC4A8500D4494A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		6924D80323FC4A8500D4494A /* signUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = signUpVC.xib; sourceTree = "<group>"; };
+		69F328632402C6B8008F06F4 /* bopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bopularCell.swift; sourceTree = "<group>"; };
+		69F328642402C6B8008F06F4 /* bopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bopularCell.xib; sourceTree = "<group>"; };
 		69FFCA1123FD7BC700F10AD2 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		69FFCA1223FD7BC700F10AD2 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
 		69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeBannerCell.swift; sourceTree = "<group>"; };
@@ -84,7 +88,6 @@
 				E0B8B7036B7C071DD01730AE /* Pods-Alforno.debug.xcconfig */,
 				C8557891AAFD1B5BACA8A2F8 /* Pods-Alforno.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -223,9 +226,19 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		69F328622402C663008F06F4 /* Popular Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Popular Cell";
+			sourceTree = "<group>";
+		};
 		69FFCA1023FD7B9600F10AD2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				69F328622402C663008F06F4 /* Popular Cell */,
+				69F328632402C6B8008F06F4 /* bopularCell.swift */,
+				69F328642402C6B8008F06F4 /* bopularCell.xib */,
 				69FFCA1523FD9EFA00F10AD2 /* BannerCell */,
 				69FFCA1123FD7BC700F10AD2 /* homeVC.swift */,
 				69FFCA1223FD7BC700F10AD2 /* homeVC.xib */,
@@ -315,6 +328,7 @@
 				6924D7EB23FC192100D4494A /* Storyboard.storyboard in Resources */,
 				6924D7FA23FC405A00D4494A /* Ubuntu-Medium.ttf in Resources */,
 				6924D7FD23FC405A00D4494A /* Ubuntu-LightItalic.ttf in Resources */,
+				69F328662402C6B8008F06F4 /* bopularCell.xib in Resources */,
 				6924D7FC23FC405A00D4494A /* Ubuntu-Bold.ttf in Resources */,
 				69FFCA1923FD9F1A00F10AD2 /* homeBannerCell.xib in Resources */,
 				6924D7F923FC405A00D4494A /* Ubuntu-Light.ttf in Resources */,
@@ -384,6 +398,7 @@
 				6924D7EF23FC3EFE00D4494A /* coustomRoundedButton.swift in Sources */,
 				69FFCA1823FD9F1A00F10AD2 /* homeBannerCell.swift in Sources */,
 				6924D7C423FC05F000D4494A /* AppDelegate.swift in Sources */,
+				69F328652402C6B8008F06F4 /* bopularCell.swift in Sources */,
 				6924D7E223FC153800D4494A /* loginVC.swift in Sources */,
 				6924D7C623FC05F000D4494A /* SceneDelegate.swift in Sources */,
 			);
