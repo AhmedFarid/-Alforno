@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6924D7C423FC05F000D4494A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7C323FC05F000D4494A /* AppDelegate.swift */; };
+		6924D7C623FC05F000D4494A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7C523FC05F000D4494A /* SceneDelegate.swift */; };
+		6924D7C823FC05F000D4494A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7C723FC05F000D4494A /* ViewController.swift */; };
+		6924D7CD23FC05F200D4494A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7CC23FC05F200D4494A /* Assets.xcassets */; };
+		6924D7E223FC153800D4494A /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7E023FC153800D4494A /* loginVC.swift */; };
+		6924D7E323FC153800D4494A /* loginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7E123FC153800D4494A /* loginVC.xib */; };
+		6924D7E923FC18BC00D4494A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7E823FC18BC00D4494A /* LaunchScreen.storyboard */; };
+		6924D7EB23FC192100D4494A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7EA23FC192100D4494A /* Storyboard.storyboard */; };
+		6924D7ED23FC3B8000D4494A /* coustomRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7EC23FC3B8000D4494A /* coustomRoundedView.swift */; };
+		6924D7EF23FC3EFE00D4494A /* coustomRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7EE23FC3EFE00D4494A /* coustomRoundedButton.swift */; };
+		6924D7F923FC405A00D4494A /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F123FC405800D4494A /* Ubuntu-Light.ttf */; };
+		6924D7FA23FC405A00D4494A /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F223FC405800D4494A /* Ubuntu-Medium.ttf */; };
+		6924D7FB23FC405A00D4494A /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F323FC405800D4494A /* Ubuntu-MediumItalic.ttf */; };
+		6924D7FC23FC405A00D4494A /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F423FC405800D4494A /* Ubuntu-Bold.ttf */; };
+		6924D7FD23FC405A00D4494A /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F523FC405900D4494A /* Ubuntu-LightItalic.ttf */; };
+		6924D7FE23FC405A00D4494A /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F623FC405900D4494A /* Ubuntu-Regular.ttf */; };
+		6924D7FF23FC405A00D4494A /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F723FC405900D4494A /* Ubuntu-BoldItalic.ttf */; };
+		6924D80023FC405A00D4494A /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */; };
+		6924D80423FC4A8500D4494A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D80223FC4A8500D4494A /* signUpVC.swift */; };
+		6924D80523FC4A8500D4494A /* signUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6924D80323FC4A8500D4494A /* signUpVC.xib */; };
+		69FFCA1323FD7BC700F10AD2 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFCA1123FD7BC700F10AD2 /* homeVC.swift */; };
+		69FFCA1423FD7BC700F10AD2 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FFCA1223FD7BC700F10AD2 /* homeVC.xib */; };
+		69FFCA1823FD9F1A00F10AD2 /* homeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */; };
+		69FFCA1923FD9F1A00F10AD2 /* homeBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FFCA1723FD9F1A00F10AD2 /* homeBannerCell.xib */; };
+		F430E8D28B2151DDF8B49530 /* Pods_Alforno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DBFB664AD5ADAF77894733 /* Pods_Alforno.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6924D7C023FC05F000D4494A /* Alforno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alforno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6924D7C323FC05F000D4494A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6924D7C523FC05F000D4494A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6924D7C723FC05F000D4494A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6924D7CC23FC05F200D4494A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6924D7D123FC05F200D4494A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6924D7E023FC153800D4494A /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		6924D7E123FC153800D4494A /* loginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginVC.xib; sourceTree = "<group>"; };
+		6924D7E823FC18BC00D4494A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6924D7EA23FC192100D4494A /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		6924D7EC23FC3B8000D4494A /* coustomRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coustomRoundedView.swift; sourceTree = "<group>"; };
+		6924D7EE23FC3EFE00D4494A /* coustomRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coustomRoundedButton.swift; sourceTree = "<group>"; };
+		6924D7F123FC405800D4494A /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		6924D7F223FC405800D4494A /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		6924D7F323FC405800D4494A /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6924D7F423FC405800D4494A /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		6924D7F523FC405900D4494A /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		6924D7F623FC405900D4494A /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		6924D7F723FC405900D4494A /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		6924D80223FC4A8500D4494A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
+		6924D80323FC4A8500D4494A /* signUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = signUpVC.xib; sourceTree = "<group>"; };
+		69FFCA1123FD7BC700F10AD2 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		69FFCA1223FD7BC700F10AD2 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
+		69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeBannerCell.swift; sourceTree = "<group>"; };
+		69FFCA1723FD9F1A00F10AD2 /* homeBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeBannerCell.xib; sourceTree = "<group>"; };
+		A0DBFB664AD5ADAF77894733 /* Pods_Alforno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alforno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8557891AAFD1B5BACA8A2F8 /* Pods-Alforno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alforno.release.xcconfig"; path = "Target Support Files/Pods-Alforno/Pods-Alforno.release.xcconfig"; sourceTree = "<group>"; };
+		E0B8B7036B7C071DD01730AE /* Pods-Alforno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alforno.debug.xcconfig"; path = "Target Support Files/Pods-Alforno/Pods-Alforno.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6924D7BD23FC05F000D4494A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F430E8D28B2151DDF8B49530 /* Pods_Alforno.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49E6903AC4F58B2951B8B29E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0B8B7036B7C071DD01730AE /* Pods-Alforno.debug.xcconfig */,
+				C8557891AAFD1B5BACA8A2F8 /* Pods-Alforno.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6924D7B723FC05F000D4494A = {
+			isa = PBXGroup;
+			children = (
+				6924D7C223FC05F000D4494A /* Alforno */,
+				6924D7C123FC05F000D4494A /* Products */,
+				49E6903AC4F58B2951B8B29E /* Pods */,
+				D490B2F8A0096D4C149F3A01 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6924D7C123FC05F000D4494A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7C023FC05F000D4494A /* Alforno.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6924D7C223FC05F000D4494A /* Alforno */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7F023FC404500D4494A /* Fonts */,
+				6924D7DF23FC129000D4494A /* Storyboard */,
+				6924D7DC23FC121000D4494A /* View */,
+				6924D7DB23FC120700D4494A /* Model */,
+				6924D7DA23FC11FD00D4494A /* Module */,
+				6924D7D923FC11ED00D4494A /* Others */,
+				6924D7D823FC11E100D4494A /* API Service */,
+				6924D7D723FC11C800D4494A /* URLs */,
+				6924D7D123FC05F200D4494A /* Info.plist */,
+			);
+			path = Alforno;
+			sourceTree = "<group>";
+		};
+		6924D7D723FC11C800D4494A /* URLs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = URLs;
+			sourceTree = "<group>";
+		};
+		6924D7D823FC11E100D4494A /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		6924D7D923FC11ED00D4494A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7CC23FC05F200D4494A /* Assets.xcassets */,
+				6924D7C323FC05F000D4494A /* AppDelegate.swift */,
+				6924D7C523FC05F000D4494A /* SceneDelegate.swift */,
+				6924D7C723FC05F000D4494A /* ViewController.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6924D7DA23FC11FD00D4494A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				69FFCA1023FD7B9600F10AD2 /* Home */,
+				6924D7DD23FC122E00D4494A /* Auth */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		6924D7DB23FC120700D4494A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6924D7DC23FC121000D4494A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7EC23FC3B8000D4494A /* coustomRoundedView.swift */,
+				6924D7EE23FC3EFE00D4494A /* coustomRoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6924D7DD23FC122E00D4494A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6924D80123FC4A5200D4494A /* SignUp */,
+				6924D7DE23FC123600D4494A /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6924D7DE23FC123600D4494A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7E023FC153800D4494A /* loginVC.swift */,
+				6924D7E123FC153800D4494A /* loginVC.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6924D7DF23FC129000D4494A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7E823FC18BC00D4494A /* LaunchScreen.storyboard */,
+				6924D7EA23FC192100D4494A /* Storyboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6924D7F023FC404500D4494A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6924D7F423FC405800D4494A /* Ubuntu-Bold.ttf */,
+				6924D7F723FC405900D4494A /* Ubuntu-BoldItalic.ttf */,
+				6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */,
+				6924D7F123FC405800D4494A /* Ubuntu-Light.ttf */,
+				6924D7F523FC405900D4494A /* Ubuntu-LightItalic.ttf */,
+				6924D7F223FC405800D4494A /* Ubuntu-Medium.ttf */,
+				6924D7F323FC405800D4494A /* Ubuntu-MediumItalic.ttf */,
+				6924D7F623FC405900D4494A /* Ubuntu-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6924D80123FC4A5200D4494A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6924D80223FC4A8500D4494A /* signUpVC.swift */,
+				6924D80323FC4A8500D4494A /* signUpVC.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		69FFCA1023FD7B9600F10AD2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				69FFCA1523FD9EFA00F10AD2 /* BannerCell */,
+				69FFCA1123FD7BC700F10AD2 /* homeVC.swift */,
+				69FFCA1223FD7BC700F10AD2 /* homeVC.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		69FFCA1523FD9EFA00F10AD2 /* BannerCell */ = {
+			isa = PBXGroup;
+			children = (
+				69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */,
+				69FFCA1723FD9F1A00F10AD2 /* homeBannerCell.xib */,
+			);
+			path = BannerCell;
+			sourceTree = "<group>";
+		};
+		D490B2F8A0096D4C149F3A01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0DBFB664AD5ADAF77894733 /* Pods_Alforno.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6924D7BF23FC05F000D4494A /* Alforno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6924D7D423FC05F200D4494A /* Build configuration list for PBXNativeTarget "Alforno" */;
+			buildPhases = (
+				232C00B400F0C43033579E9C /* [CP] Check Pods Manifest.lock */,
+				6924D7BC23FC05F000D4494A /* Sources */,
+				6924D7BD23FC05F000D4494A /* Frameworks */,
+				6924D7BE23FC05F000D4494A /* Resources */,
+				7AC84D96F18431D33D95D735 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alforno;
+			productName = Alforno;
+			productReference = 6924D7C023FC05F000D4494A /* Alforno.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6924D7B823FC05F000D4494A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "E-bakers";
+				TargetAttributes = {
+					6924D7BF23FC05F000D4494A = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6924D7BB23FC05F000D4494A /* Build configuration list for PBXProject "Alforno" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6924D7B723FC05F000D4494A;
+			productRefGroup = 6924D7C123FC05F000D4494A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6924D7BF23FC05F000D4494A /* Alforno */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6924D7BE23FC05F000D4494A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6924D7FB23FC405A00D4494A /* Ubuntu-MediumItalic.ttf in Resources */,
+				6924D7E923FC18BC00D4494A /* LaunchScreen.storyboard in Resources */,
+				6924D7EB23FC192100D4494A /* Storyboard.storyboard in Resources */,
+				6924D7FA23FC405A00D4494A /* Ubuntu-Medium.ttf in Resources */,
+				6924D7FD23FC405A00D4494A /* Ubuntu-LightItalic.ttf in Resources */,
+				6924D7FC23FC405A00D4494A /* Ubuntu-Bold.ttf in Resources */,
+				69FFCA1923FD9F1A00F10AD2 /* homeBannerCell.xib in Resources */,
+				6924D7F923FC405A00D4494A /* Ubuntu-Light.ttf in Resources */,
+				6924D80023FC405A00D4494A /* Ubuntu-Italic.ttf in Resources */,
+				6924D7FF23FC405A00D4494A /* Ubuntu-BoldItalic.ttf in Resources */,
+				69FFCA1423FD7BC700F10AD2 /* homeVC.xib in Resources */,
+				6924D7CD23FC05F200D4494A /* Assets.xcassets in Resources */,
+				6924D80523FC4A8500D4494A /* signUpVC.xib in Resources */,
+				6924D7FE23FC405A00D4494A /* Ubuntu-Regular.ttf in Resources */,
+				6924D7E323FC153800D4494A /* loginVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		232C00B400F0C43033579E9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alforno-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AC84D96F18431D33D95D735 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alforno/Pods-Alforno-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alforno/Pods-Alforno-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alforno/Pods-Alforno-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6924D7BC23FC05F000D4494A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6924D7ED23FC3B8000D4494A /* coustomRoundedView.swift in Sources */,
+				69FFCA1323FD7BC700F10AD2 /* homeVC.swift in Sources */,
+				6924D80423FC4A8500D4494A /* signUpVC.swift in Sources */,
+				6924D7C823FC05F000D4494A /* ViewController.swift in Sources */,
+				6924D7EF23FC3EFE00D4494A /* coustomRoundedButton.swift in Sources */,
+				69FFCA1823FD9F1A00F10AD2 /* homeBannerCell.swift in Sources */,
+				6924D7C423FC05F000D4494A /* AppDelegate.swift in Sources */,
+				6924D7E223FC153800D4494A /* loginVC.swift in Sources */,
+				6924D7C623FC05F000D4494A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6924D7D223FC05F200D4494A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6924D7D323FC05F200D4494A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6924D7D523FC05F200D4494A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B8B7036B7C071DD01730AE /* Pods-Alforno.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
+				INFOPLIST_FILE = Alforno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FaridEbakers.Alforno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6924D7D623FC05F200D4494A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8557891AAFD1B5BACA8A2F8 /* Pods-Alforno.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
+				INFOPLIST_FILE = Alforno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FaridEbakers.Alforno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6924D7BB23FC05F000D4494A /* Build configuration list for PBXProject "Alforno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6924D7D223FC05F200D4494A /* Debug */,
+				6924D7D323FC05F200D4494A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6924D7D423FC05F200D4494A /* Build configuration list for PBXNativeTarget "Alforno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6924D7D523FC05F200D4494A /* Debug */,
+				6924D7D623FC05F200D4494A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6924D7B823FC05F000D4494A /* Project object */;
+}
