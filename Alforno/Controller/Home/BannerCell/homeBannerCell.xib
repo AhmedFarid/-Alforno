@@ -30,6 +30,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="372" height="253"/>
+            <connections>
+                <outlet property="bannerImage" destination="0Vc-8U-LDk" id="dXt-lA-nZX"/>
+            </connections>
             <point key="canvasLocation" x="365.21739130434787" y="221.31696428571428"/>
         </collectionViewCell>
     </objects>

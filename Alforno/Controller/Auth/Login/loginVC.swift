@@ -10,6 +10,9 @@ import UIKit
 
 class loginVC: UIViewController {
     
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var emailText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(true)
@@ -28,10 +31,19 @@ class loginVC: UIViewController {
     }
     
     @IBAction func loginBTN(_ sender: Any) {
-        let vc = homeVC	(nibName: "homeVC", bundle: nil)
-        self.navigationController!.pushViewController(vc, animated: true)
+        loginApi.login(email: emailText.text ?? "", password: passwordText.text ?? "") { (error, success, login) in
+            if success {
+                if login?.status == false{
+                    self.showAlert(title: "Login", message: "Faild email or password is wrong")
+                }else{
+                    let login = login?.data
+                    print(login?.email ?? "")
+                }
+            }else {
+                self.showAlert(title: "Login", message: "Check your network")
+            }
+        }
     }
-    
     
     @IBAction func signupActionButton(_ sender: Any) {
         let vc = signUpVC(nibName: "signUpVC", bundle: nil)

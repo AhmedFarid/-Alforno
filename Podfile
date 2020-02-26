@@ -11,5 +11,6 @@ target 'Alforno' do
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'MOLH'
+  pod 'NVActivityIndicatorView'
 
 end

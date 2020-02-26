@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="loginVC" customModule="Alforno" customModuleProvider="target">
             <connections>
+                <outlet property="emailText" destination="qpj-ke-TQo" id="Ztg-eJ-siF"/>
+                <outlet property="passwordText" destination="JxF-tN-4mw" id="q3j-bj-5jo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

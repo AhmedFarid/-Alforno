@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6914777E2406A0A500B691EA /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914777D2406A0A500B691EA /* Auth.swift */; };
+		691477812406AD7A00B691EA /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691477802406AD7A00B691EA /* config.swift */; };
+		691477842406B14300B691EA /* registerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691477832406B14300B691EA /* registerApi.swift */; };
+		691477872406C45200B691EA /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691477862406C45200B691EA /* helper.swift */; };
+		691477892406C46400B691EA /* showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691477882406C46400B691EA /* showAlert.swift */; };
+		6914778B2406E29800B691EA /* loginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914778A2406E29800B691EA /* loginApi.swift */; };
+		6914778E2406EA5C00B691EA /* slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914778D2406EA5C00B691EA /* slider.swift */; };
+		691477912406EBDC00B691EA /* homeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691477902406EBDC00B691EA /* homeApi.swift */; };
 		6924D7C423FC05F000D4494A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7C323FC05F000D4494A /* AppDelegate.swift */; };
 		6924D7C623FC05F000D4494A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7C523FC05F000D4494A /* SceneDelegate.swift */; };
 		6924D7C823FC05F000D4494A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D7C723FC05F000D4494A /* ViewController.swift */; };
@@ -27,8 +35,8 @@
 		6924D80023FC405A00D4494A /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */; };
 		6924D80423FC4A8500D4494A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924D80223FC4A8500D4494A /* signUpVC.swift */; };
 		6924D80523FC4A8500D4494A /* signUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6924D80323FC4A8500D4494A /* signUpVC.xib */; };
-		69F328652402C6B8008F06F4 /* bopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F328632402C6B8008F06F4 /* bopularCell.swift */; };
-		69F328662402C6B8008F06F4 /* bopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F328642402C6B8008F06F4 /* bopularCell.xib */; };
+		69F328652402C6B8008F06F4 /* offerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F328632402C6B8008F06F4 /* offerCell.swift */; };
+		69F328662402C6B8008F06F4 /* offerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F328642402C6B8008F06F4 /* offerCell.xib */; };
 		69FFCA1323FD7BC700F10AD2 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFCA1123FD7BC700F10AD2 /* homeVC.swift */; };
 		69FFCA1423FD7BC700F10AD2 /* homeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FFCA1223FD7BC700F10AD2 /* homeVC.xib */; };
 		69FFCA1823FD9F1A00F10AD2 /* homeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */; };
@@ -37,6 +45,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6914777D2406A0A500B691EA /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		691477802406AD7A00B691EA /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		691477832406B14300B691EA /* registerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerApi.swift; sourceTree = "<group>"; };
+		691477862406C45200B691EA /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		691477882406C46400B691EA /* showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAlert.swift; sourceTree = "<group>"; };
+		6914778A2406E29800B691EA /* loginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginApi.swift; sourceTree = "<group>"; };
+		6914778D2406EA5C00B691EA /* slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slider.swift; sourceTree = "<group>"; };
+		691477902406EBDC00B691EA /* homeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeApi.swift; sourceTree = "<group>"; };
 		6924D7C023FC05F000D4494A /* Alforno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alforno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6924D7C323FC05F000D4494A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6924D7C523FC05F000D4494A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +75,8 @@
 		6924D7F823FC405A00D4494A /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
 		6924D80223FC4A8500D4494A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		6924D80323FC4A8500D4494A /* signUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = signUpVC.xib; sourceTree = "<group>"; };
-		69F328632402C6B8008F06F4 /* bopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bopularCell.swift; sourceTree = "<group>"; };
-		69F328642402C6B8008F06F4 /* bopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bopularCell.xib; sourceTree = "<group>"; };
+		69F328632402C6B8008F06F4 /* offerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offerCell.swift; sourceTree = "<group>"; };
+		69F328642402C6B8008F06F4 /* offerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = offerCell.xib; sourceTree = "<group>"; };
 		69FFCA1123FD7BC700F10AD2 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		69FFCA1223FD7BC700F10AD2 /* homeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeVC.xib; sourceTree = "<group>"; };
 		69FFCA1623FD9F1A00F10AD2 /* homeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeBannerCell.swift; sourceTree = "<group>"; };
@@ -91,6 +107,64 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6914777A2406A08100B691EA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6914777C2406A09000B691EA /* Register */,
+				6914777B2406A08900B691EA /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6914777B2406A08900B691EA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6914777C2406A09000B691EA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				6914777D2406A0A500B691EA /* Auth.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		691477822406B13400B691EA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				691477832406B14300B691EA /* registerApi.swift */,
+				6914778A2406E29800B691EA /* loginApi.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		691477852406C43E00B691EA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				691477862406C45200B691EA /* helper.swift */,
+				691477882406C46400B691EA /* showAlert.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6914778C2406EA4D00B691EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6914778D2406EA5C00B691EA /* slider.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6914778F2406EBD000B691EA /* home */ = {
+			isa = PBXGroup;
+			children = (
+				691477902406EBDC00B691EA /* homeApi.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		6924D7B723FC05F000D4494A = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +186,12 @@
 		6924D7C223FC05F000D4494A /* Alforno */ = {
 			isa = PBXGroup;
 			children = (
+				691477852406C43E00B691EA /* Extension */,
 				6924D7F023FC404500D4494A /* Fonts */,
 				6924D7DF23FC129000D4494A /* Storyboard */,
 				6924D7DC23FC121000D4494A /* View */,
 				6924D7DB23FC120700D4494A /* Model */,
-				6924D7DA23FC11FD00D4494A /* Module */,
+				6924D7DA23FC11FD00D4494A /* Controller */,
 				6924D7D923FC11ED00D4494A /* Others */,
 				6924D7D823FC11E100D4494A /* API Service */,
 				6924D7D723FC11C800D4494A /* URLs */,
@@ -128,6 +203,7 @@
 		6924D7D723FC11C800D4494A /* URLs */ = {
 			isa = PBXGroup;
 			children = (
+				691477802406AD7A00B691EA /* config.swift */,
 			);
 			path = URLs;
 			sourceTree = "<group>";
@@ -135,6 +211,8 @@
 		6924D7D823FC11E100D4494A /* API Service */ = {
 			isa = PBXGroup;
 			children = (
+				6914778F2406EBD000B691EA /* home */,
+				691477822406B13400B691EA /* Auth */,
 			);
 			path = "API Service";
 			sourceTree = "<group>";
@@ -150,18 +228,20 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
-		6924D7DA23FC11FD00D4494A /* Module */ = {
+		6924D7DA23FC11FD00D4494A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				69FFCA1023FD7B9600F10AD2 /* Home */,
 				6924D7DD23FC122E00D4494A /* Auth */,
 			);
-			path = Module;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		6924D7DB23FC120700D4494A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6914778C2406EA4D00B691EA /* Home */,
+				6914777A2406A08100B691EA /* Auth */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +309,8 @@
 		69F328622402C663008F06F4 /* Popular Cell */ = {
 			isa = PBXGroup;
 			children = (
+				69F328632402C6B8008F06F4 /* offerCell.swift */,
+				69F328642402C6B8008F06F4 /* offerCell.xib */,
 			);
 			path = "Popular Cell";
 			sourceTree = "<group>";
@@ -237,8 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				69F328622402C663008F06F4 /* Popular Cell */,
-				69F328632402C6B8008F06F4 /* bopularCell.swift */,
-				69F328642402C6B8008F06F4 /* bopularCell.xib */,
 				69FFCA1523FD9EFA00F10AD2 /* BannerCell */,
 				69FFCA1123FD7BC700F10AD2 /* homeVC.swift */,
 				69FFCA1223FD7BC700F10AD2 /* homeVC.xib */,
@@ -328,7 +408,7 @@
 				6924D7EB23FC192100D4494A /* Storyboard.storyboard in Resources */,
 				6924D7FA23FC405A00D4494A /* Ubuntu-Medium.ttf in Resources */,
 				6924D7FD23FC405A00D4494A /* Ubuntu-LightItalic.ttf in Resources */,
-				69F328662402C6B8008F06F4 /* bopularCell.xib in Resources */,
+				69F328662402C6B8008F06F4 /* offerCell.xib in Resources */,
 				6924D7FC23FC405A00D4494A /* Ubuntu-Bold.ttf in Resources */,
 				69FFCA1923FD9F1A00F10AD2 /* homeBannerCell.xib in Resources */,
 				6924D7F923FC405A00D4494A /* Ubuntu-Light.ttf in Resources */,
@@ -392,14 +472,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				6924D7ED23FC3B8000D4494A /* coustomRoundedView.swift in Sources */,
+				6914777E2406A0A500B691EA /* Auth.swift in Sources */,
+				691477842406B14300B691EA /* registerApi.swift in Sources */,
 				69FFCA1323FD7BC700F10AD2 /* homeVC.swift in Sources */,
 				6924D80423FC4A8500D4494A /* signUpVC.swift in Sources */,
 				6924D7C823FC05F000D4494A /* ViewController.swift in Sources */,
 				6924D7EF23FC3EFE00D4494A /* coustomRoundedButton.swift in Sources */,
 				69FFCA1823FD9F1A00F10AD2 /* homeBannerCell.swift in Sources */,
 				6924D7C423FC05F000D4494A /* AppDelegate.swift in Sources */,
-				69F328652402C6B8008F06F4 /* bopularCell.swift in Sources */,
+				691477872406C45200B691EA /* helper.swift in Sources */,
+				69F328652402C6B8008F06F4 /* offerCell.swift in Sources */,
+				6914778E2406EA5C00B691EA /* slider.swift in Sources */,
+				691477812406AD7A00B691EA /* config.swift in Sources */,
+				6914778B2406E29800B691EA /* loginApi.swift in Sources */,
 				6924D7E223FC153800D4494A /* loginVC.swift in Sources */,
+				691477912406EBDC00B691EA /* homeApi.swift in Sources */,
+				691477892406C46400B691EA /* showAlert.swift in Sources */,
 				6924D7C623FC05F000D4494A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

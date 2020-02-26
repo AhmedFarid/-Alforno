@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class signUpVC: UIViewController {
+class signUpVC: UIViewController  {
     
     var hide:Bool = true
     
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var phoneText: UITextField!
+    @IBOutlet weak var fullNameText: UITextField!
     @IBOutlet weak var scroll: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +25,30 @@ class signUpVC: UIViewController {
         customNB()
     }
     
-    func customNB() {
-        let backImage = UIImage(named: "BACK-1")
-        self.navigationController?.navigationBar.backIndicatorImage = backImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-        self.navigationController?.navigationBar.backItem?.title = ""
-    }
-
     
+    func customNB() {
+           let backImage = UIImage(named: "BACK-1")
+           self.navigationController?.navigationBar.backIndicatorImage = backImage
+           self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+           self.navigationController?.navigationBar.backItem?.title = ""
+       }
+    
+    
+    @IBAction func registerBtnAction(_ sender: Any) {
+        
+        registerApi.register(name: fullNameText.text ?? "", phone: phoneText.text ?? "", email: emailText.text ?? "", password: passwordText.text ?? "") { (error, success, Register) in
+            if success {
+                if Register?.status == false{
+                    self.showAlert(title: "Sign Up", message: "Faild your mail is used")
+                }else{
+                    let login = Register?.data
+                    print(login?.email ?? "")
+                }
+            }else {
+                self.showAlert(title: "SignUp", message: "Check your network")
+            }
+        }
+    }
 }
 
 extension signUpVC: UIScrollViewDelegate {
