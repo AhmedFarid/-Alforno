@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class signUpVC: UIViewController  {
+class signUpVC: UIViewController, NVActivityIndicatorViewable{
     
     var hide:Bool = true
     
@@ -35,18 +35,21 @@ class signUpVC: UIViewController  {
     
     
     @IBAction func registerBtnAction(_ sender: Any) {
-        
+        startAnimating(CGSize(width: 45, height: 45), message: "Loading",type: .ballSpinFadeLoader, color: .red, textColor: .white)
         registerApi.register(name: fullNameText.text ?? "", phone: phoneText.text ?? "", email: emailText.text ?? "", password: passwordText.text ?? "") { (error, success, Register) in
             if success {
                 if Register?.status == false{
                     self.showAlert(title: "Sign Up", message: "Faild your mail is used")
+                        self.stopAnimating()
                 }else{
                     let login = Register?.data
                     print(login?.email ?? "")
                 }
             }else {
                 self.showAlert(title: "SignUp", message: "Check your network")
+                    self.stopAnimating()
             }
+            
         }
     }
 }

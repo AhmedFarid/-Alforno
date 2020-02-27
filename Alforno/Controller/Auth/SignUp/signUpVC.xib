@@ -40,13 +40,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h" translatesAutoresizingMaskIntoConstraints="NO" id="FOe-28-WaH">
-                                    <rect key="frame" x="14" y="120" width="386" height="206.00000000000006"/>
+                                    <rect key="frame" x="-179" y="120" width="772" height="412"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="FOe-28-WaH" secondAttribute="height" multiplier="193:103" id="K0l-Rm-lTt"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-MM-oyn" customClass="coustomRoundedView" customModule="Alforno" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="376" width="382" height="275"/>
+                                    <rect key="frame" x="16" y="582" width="382" height="275"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-uC-TJF">
                                             <rect key="frame" x="0.0" y="200" width="382" height="1"/>
@@ -134,7 +134,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR4-Lg-jqg" customClass="coustomRoundedButton" customModule="Alforno" customModuleProvider="target">
-                                    <rect key="frame" x="103.5" y="701" width="207" height="50"/>
+                                    <rect key="frame" x="103.5" y="907" width="207" height="50"/>
                                     <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="abP-g1-qpI"/>

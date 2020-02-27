@@ -14,8 +14,10 @@ class homeVC: UIViewController {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var offerTabelVIew: UITableView!
     @IBOutlet weak var bageControl: UIPageControl!
+    @IBOutlet weak var countOFOffers: UILabel!
     
     var slider = [dataSlider]()
+    var offers = [offfersData]()
     var timer : Timer?
     var currentIndex = 0
     
@@ -34,6 +36,7 @@ class homeVC: UIViewController {
         self.offerTabelVIew.register(UINib(nibName: "offerCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         sliderHandelRefresh()
+        offersHandelRefresh()
         startTimer()
         
     }
@@ -89,6 +92,17 @@ class homeVC: UIViewController {
         }
     }
     
+    func offersHandelRefresh(){
+        homeApi.offersApi{ (error,success,offers) in
+            if let offers = offers{
+                self.offers = offers.data ?? []
+                print(offers)
+                self.countOFOffers.text = ("\(self.offers.count) Dishes")
+                self.offerTabelVIew.reloadData()
+            }
+        }
+    }
+    
     func startTimer(){
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
@@ -121,21 +135,17 @@ extension homeVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = offerTabelVIew.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! offerCell
+        if let cell = offerTabelVIew.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? offerCell {
+        cell.configureCell(offer: offers[indexPath.row])
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
+        }else {
+            return offerCell()
+        }
     }
     
-    //
-    //    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath) as! bannerCell
-    //               cell.configureCell(images: slider[indexPath.item])
-    //               if MOLHLanguage.currentAppleLanguage() == "ar"{
-    //                   cell.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
-    //               }
-    //               return cell
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 14
+        return offers.count
         
     }
 }

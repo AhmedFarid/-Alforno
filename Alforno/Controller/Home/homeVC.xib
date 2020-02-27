@@ -13,15 +13,13 @@
         <array key="Ubuntu-Light.ttf">
             <string>Ubuntu-Light</string>
         </array>
-        <array key="Ubuntu-Regular.ttf">
-            <string>Ubuntu-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="homeVC" customModule="Alforno" customModuleProvider="target">
             <connections>
                 <outlet property="bageControl" destination="Ehl-OX-cla" id="jNj-Fw-sMN"/>
                 <outlet property="bannerCollectionView" destination="pz0-4e-3q9" id="16N-oG-Qde"/>
+                <outlet property="countOFOffers" destination="5kR-am-UmJ" id="a0S-UZ-Bly"/>
                 <outlet property="offerTabelVIew" destination="n9l-Wt-PUg" id="Uab-jC-phC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -61,13 +59,6 @@
                     <color key="textColor" red="0.4392156862745098" green="0.43137254901960786" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COs-4e-iNM">
-                    <rect key="frame" x="356" y="361" width="50" height="15"/>
-                    <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="13"/>
-                    <state key="normal" title="See All " image="arrow red">
-                        <color key="titleColor" red="0.8980392157" green="0.16078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="155" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-Wt-PUg">
                     <rect key="frame" x="8" y="376" width="398" height="486"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -95,15 +86,13 @@
                 <constraint firstItem="mSU-MW-udn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LiU-Ao-eIp"/>
                 <constraint firstItem="pz0-4e-3q9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.31808" id="M0B-wz-GE6"/>
                 <constraint firstItem="n9l-Wt-PUg" firstAttribute="leading" secondItem="T5B-hR-m7x" secondAttribute="leading" id="M8p-sP-jBu"/>
-                <constraint firstItem="COs-4e-iNM" firstAttribute="centerY" secondItem="QOH-gS-vKI" secondAttribute="centerY" id="QHb-FQ-wJi"/>
                 <constraint firstItem="T5B-hR-m7x" firstAttribute="top" secondItem="Ehl-OX-cla" secondAttribute="bottom" constant="-8" id="QbU-ot-jiP"/>
                 <constraint firstItem="5kR-am-UmJ" firstAttribute="centerY" secondItem="QOH-gS-vKI" secondAttribute="centerY" id="YME-1i-Z2h"/>
-                <constraint firstItem="n9l-Wt-PUg" firstAttribute="top" secondItem="COs-4e-iNM" secondAttribute="bottom" id="iMH-rh-fpC"/>
-                <constraint firstItem="COs-4e-iNM" firstAttribute="trailing" secondItem="T5B-hR-m7x" secondAttribute="trailing" id="kj3-7u-kst"/>
                 <constraint firstItem="T5B-hR-m7x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="kxi-xj-s92"/>
                 <constraint firstItem="Ehl-OX-cla" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mOB-dL-lVg"/>
                 <constraint firstItem="QOH-gS-vKI" firstAttribute="leading" secondItem="T5B-hR-m7x" secondAttribute="leading" id="r5H-DK-FsF"/>
                 <constraint firstItem="n9l-Wt-PUg" firstAttribute="trailing" secondItem="T5B-hR-m7x" secondAttribute="trailing" id="rbl-DS-9H9"/>
+                <constraint firstItem="n9l-Wt-PUg" firstAttribute="top" secondItem="QOH-gS-vKI" secondAttribute="bottom" id="tM4-o4-Wia"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ehl-OX-cla" secondAttribute="trailing" constant="16" id="tSJ-tX-e9M"/>
                 <constraint firstItem="pz0-4e-3q9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xjw-Sh-ZAR"/>
             </constraints>
@@ -113,6 +102,5 @@
     </objects>
     <resources>
         <image name="Rectangle 8" width="375" height="330"/>
-        <image name="arrow red" width="6" height="10"/>
     </resources>
 </document>

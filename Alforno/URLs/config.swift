@@ -17,6 +17,7 @@ struct URLs {
     static let register = main + "register"
     static let login = main + "login"
     static let slider = main + "slider"
+    static let offersProducts = main + "offers_products"
     
     
     

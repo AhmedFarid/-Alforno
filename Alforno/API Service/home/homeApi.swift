@@ -43,5 +43,32 @@ class homeApi: NSObject {
         
     }
     
+    class func offersApi(completion: @escaping(_ error: Error?,_ success: Bool,_ offer: Offers?)-> Void){
+        
+        let parametars = [
+            "lang": "en"
+        ]
+        let url = URLs.offersProducts
+        print(url)
+        print(parametars)
+        AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: nil).responseJSON{ (response) in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,nil)
+                print(error)
+            case .success:
+                do{
+                    print(response)
+                    let offer = try JSONDecoder().decode(Offers.self, from: response.data!)
+                        completion(nil,true,offer)
+                }catch{
+                    print("error")
+                }
+            }
+        }
+        
+    }
+    
 }
 

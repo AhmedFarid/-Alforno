@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class loginVC: UIViewController {
+class loginVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var emailText: UITextField!
@@ -31,15 +32,18 @@ class loginVC: UIViewController {
     }
     
     @IBAction func loginBTN(_ sender: Any) {
+        startAnimating(CGSize(width: 45, height: 45), message: "Loading",type: .ballSpinFadeLoader, color: .red, textColor: .white)
         loginApi.login(email: emailText.text ?? "", password: passwordText.text ?? "") { (error, success, login) in
             if success {
                 if login?.status == false{
+                    self.stopAnimating()
                     self.showAlert(title: "Login", message: "Faild email or password is wrong")
                 }else{
                     let login = login?.data
                     print(login?.email ?? "")
                 }
             }else {
+                self.stopAnimating()
                 self.showAlert(title: "Login", message: "Check your network")
             }
         }
