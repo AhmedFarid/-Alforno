@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="favouritesVC" customModule="Alforno" customModuleProvider="target">
+            <connections>
+                <outlet property="allProdectCollectionView" destination="EhS-wK-z1i" id="L4G-QI-nqk"/>
+                <outlet property="view" destination="dqw-jO-xRp" id="N48-0o-1eP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dqw-jO-xRp">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="fyF-Oi-L36">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="254"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-wK-z1i">
+                    <rect key="frame" x="8" y="32" width="398" height="864"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VV5-gH-X3c">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.96981953279999999" green="0.96981953279999999" blue="0.96981953279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fyF-Oi-L36" firstAttribute="top" secondItem="dqw-jO-xRp" secondAttribute="top" id="71g-JE-9Cv"/>
+                <constraint firstItem="fyF-Oi-L36" firstAttribute="leading" secondItem="m88-U7-Ro7" secondAttribute="leading" id="9s7-IB-gsB"/>
+                <constraint firstItem="fyF-Oi-L36" firstAttribute="trailing" secondItem="m88-U7-Ro7" secondAttribute="trailing" id="Gkj-XL-6qP"/>
+                <constraint firstAttribute="bottom" secondItem="EhS-wK-z1i" secondAttribute="bottom" id="Pmn-VQ-72q"/>
+                <constraint firstItem="EhS-wK-z1i" firstAttribute="leading" secondItem="m88-U7-Ro7" secondAttribute="leading" constant="8" id="f6i-j6-fvE"/>
+                <constraint firstItem="EhS-wK-z1i" firstAttribute="top" secondItem="dqw-jO-xRp" secondAttribute="top" constant="32" id="gyo-I5-agK"/>
+                <constraint firstItem="fyF-Oi-L36" firstAttribute="height" secondItem="dqw-jO-xRp" secondAttribute="height" multiplier="0.283527" id="hQy-OA-nN2"/>
+                <constraint firstItem="EhS-wK-z1i" firstAttribute="trailing" secondItem="m88-U7-Ro7" secondAttribute="trailing" constant="-8" id="nsv-ss-f7t"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="m88-U7-Ro7"/>
+            <point key="canvasLocation" x="-1" y="117"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Rectangle 5" width="375" height="220"/>
+    </resources>
+</document>

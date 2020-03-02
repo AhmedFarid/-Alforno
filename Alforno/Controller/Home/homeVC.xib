@@ -29,11 +29,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="mSU-MW-udn">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="364"/>
-                </imageView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-OX-cla">
+                    <rect key="frame" x="16" y="378" width="382" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="0.8980392157" green="0.16078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-gS-vKI">
+                    <rect key="frame" x="8" y="410" width="40.5" height="15"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
+                    <color key="textColor" red="0.039871752259999997" green="0.1271262467" blue="0.1923708022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-am-UmJ">
+                    <rect key="frame" x="56.5" y="417.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="10"/>
+                    <color key="textColor" red="0.4392156862745098" green="0.43137254901960786" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="155" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-Wt-PUg">
+                    <rect key="frame" x="8" y="425" width="398" height="437"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5B-hR-m7x">
+                    <rect key="frame" x="8" y="407" width="398" height="1"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ijS-fu-RGA"/>
+                    </constraints>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pz0-4e-3q9">
-                    <rect key="frame" x="0.0" y="52" width="414" height="285"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="342"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xii-tm-49Z">
                         <size key="itemSize" width="50" height="50"/>
@@ -42,52 +67,20 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-OX-cla">
-                    <rect key="frame" x="16" y="329" width="382" height="37"/>
-                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="currentPageIndicatorTintColor" red="0.8980392157" green="0.16078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                </pageControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-gS-vKI">
-                    <rect key="frame" x="8" y="361" width="40.5" height="15"/>
-                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
-                    <color key="textColor" red="0.039871752259999997" green="0.1271262467" blue="0.1923708022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 Dishes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-am-UmJ">
-                    <rect key="frame" x="56.5" y="363" width="43" height="11.5"/>
-                    <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="10"/>
-                    <color key="textColor" red="0.4392156862745098" green="0.43137254901960786" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="155" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-Wt-PUg">
-                    <rect key="frame" x="8" y="376" width="398" height="486"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5B-hR-m7x">
-                    <rect key="frame" x="8" y="358" width="398" height="1"/>
-                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="ijS-fu-RGA"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="5kR-am-UmJ" firstAttribute="leading" secondItem="QOH-gS-vKI" secondAttribute="trailing" constant="8" id="1su-uu-1yQ"/>
-                <constraint firstItem="mSU-MW-udn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.406404" id="5QV-aA-UXw"/>
-                <constraint firstItem="pz0-4e-3q9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="8Pf-TF-Ne1"/>
+                <constraint firstItem="pz0-4e-3q9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Pf-TF-Ne1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T5B-hR-m7x" secondAttribute="trailing" constant="8" id="B0T-a2-yhb"/>
-                <constraint firstItem="mSU-MW-udn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CUx-f7-5X5"/>
-                <constraint firstItem="mSU-MW-udn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ClV-3J-sUs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n9l-Wt-PUg" secondAttribute="bottom" id="IZz-Ku-Rgl"/>
-                <constraint firstItem="Ehl-OX-cla" firstAttribute="top" secondItem="pz0-4e-3q9" secondAttribute="bottom" constant="-8" id="JkN-fj-llQ"/>
                 <constraint firstItem="QOH-gS-vKI" firstAttribute="top" secondItem="T5B-hR-m7x" secondAttribute="bottom" constant="2" id="Kjj-ur-6So"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pz0-4e-3q9" secondAttribute="trailing" id="Ky8-T1-5K9"/>
-                <constraint firstItem="mSU-MW-udn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LiU-Ao-eIp"/>
-                <constraint firstItem="pz0-4e-3q9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.31808" id="M0B-wz-GE6"/>
                 <constraint firstItem="n9l-Wt-PUg" firstAttribute="leading" secondItem="T5B-hR-m7x" secondAttribute="leading" id="M8p-sP-jBu"/>
                 <constraint firstItem="T5B-hR-m7x" firstAttribute="top" secondItem="Ehl-OX-cla" secondAttribute="bottom" constant="-8" id="QbU-ot-jiP"/>
+                <constraint firstItem="Ehl-OX-cla" firstAttribute="top" secondItem="pz0-4e-3q9" secondAttribute="bottom" constant="-8" id="WaR-8l-kS2"/>
                 <constraint firstItem="5kR-am-UmJ" firstAttribute="centerY" secondItem="QOH-gS-vKI" secondAttribute="centerY" id="YME-1i-Z2h"/>
+                <constraint firstItem="pz0-4e-3q9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.381696" id="a4y-fd-Xh9"/>
                 <constraint firstItem="T5B-hR-m7x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="kxi-xj-s92"/>
                 <constraint firstItem="Ehl-OX-cla" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mOB-dL-lVg"/>
                 <constraint firstItem="QOH-gS-vKI" firstAttribute="leading" secondItem="T5B-hR-m7x" secondAttribute="leading" id="r5H-DK-FsF"/>
@@ -100,7 +93,4 @@
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
-    <resources>
-        <image name="Rectangle 8" width="375" height="330"/>
-    </resources>
 </document>

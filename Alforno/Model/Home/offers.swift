@@ -8,9 +8,6 @@
 
 import Foundation
 
-
-import Foundation
-
 struct Offers: Codable {
     let data: [offfersData]?
     let status: Bool?
@@ -18,9 +15,10 @@ struct Offers: Codable {
 }
 
 struct offfersData: Codable {
-    let id: Int?
+    let id, wishlistState: Int?
     let title, shortDescription, offerDescription, priceGeneral: String?
     let salePrice, image: String?
+    
 
     enum CodingKeys: String, CodingKey {
         case id, title
@@ -28,6 +26,8 @@ struct offfersData: Codable {
         case offerDescription = "description"
         case priceGeneral = "price_general"
         case salePrice = "sale_price"
+        case wishlistState = "Wishlist_state"
         case image
     }
 }
+    

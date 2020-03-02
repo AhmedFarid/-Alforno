@@ -12,5 +12,6 @@ target 'Alforno' do
   pod 'IQKeyboardManagerSwift'
   pod 'MOLH'
   pod 'NVActivityIndicatorView'
+  pod 'SideMenu'
 
 end

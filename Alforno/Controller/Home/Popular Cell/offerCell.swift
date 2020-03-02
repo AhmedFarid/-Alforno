@@ -14,9 +14,10 @@ class offerCell: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var offerDescripation: UILabel!
-    @IBOutlet weak var typeOfMeil: UILabel!
+//    @IBOutlet weak var typeOfMeil: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var oldPrice: UILabel!
+    @IBOutlet weak var favBTN: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

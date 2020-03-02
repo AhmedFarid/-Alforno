@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+import SideMenu
 
-class homeVC: UIViewController {
+class homeVC: UIViewController, NVActivityIndicatorViewable {
     
     
     @IBOutlet weak var bannerCollectionView: UICollectionView!
@@ -20,11 +22,12 @@ class homeVC: UIViewController {
     var offers = [offfersData]()
     var timer : Timer?
     var currentIndex = 0
+    var singleSection: offfersData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNav()
-        setUpNavColore(true)
+        setUpNavColore(false)
         
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
@@ -45,12 +48,18 @@ class homeVC: UIViewController {
         return .lightContent
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        sliderHandelRefresh()
+        offersHandelRefresh()
+    }
+    
+    
     func setUpNavColore(_ isTranslucent: Bool){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = isTranslucent
         self.navigationController?.navigationBar.barStyle = .black
-        //self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.03921568627, green: 0.1254901961, blue: 0.1921568627, alpha: 1)
     }
     
     func setUpNav() {
@@ -70,8 +79,17 @@ class homeVC: UIViewController {
     }
     
     @objc func sideMenu() {
-        print("print")
+//        let menu = SideMenuNavigationController(nibName: "SideMenuNavigationController ", bundle: nil)
+//        menu.leftSide = true
+//        present(menu, animated: true, completion: nil)
+//        let menu = SideMenuNavigationController(rootViewController: sideMenuVC)
+        // SideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+        let menu = UIStoryboard(name: "sideMenu", bundle: nil).instantiateViewController(withIdentifier: "RightMenu") as! SideMenuNavigationController
+        menu.presentationStyle = .menuSlideIn
+        menu.menuWidth = view.frame.size.width - 50
         
+        present(menu, animated: true, completion: nil)
     }
     
     @objc func showCart() {
@@ -93,16 +111,24 @@ class homeVC: UIViewController {
     }
     
     func offersHandelRefresh(){
+        startAnimating(CGSize(width: 45, height: 45), message: "Loading",type: .ballSpinFadeLoader, color: .red, textColor: .white)
         homeApi.offersApi{ (error,success,offers) in
-            if let offers = offers{
-                self.offers = offers.data ?? []
-                print(offers)
-                self.countOFOffers.text = ("\(self.offers.count) Dishes")
-                self.offerTabelVIew.reloadData()
+            if success {
+                if let offers = offers{
+                    self.offers = offers.data ?? []
+                    print(offers)
+                    self.countOFOffers.text = ("\(self.offers.count) Dishes")
+                    self.offerTabelVIew.reloadData()
+                    self.stopAnimating()
+                }else {
+                    
+                }
+            }else {
+               self.stopAnimating()
             }
         }
     }
-    
+            
     func startTimer(){
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
@@ -136,9 +162,14 @@ extension homeVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = offerTabelVIew.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? offerCell {
-        cell.configureCell(offer: offers[indexPath.row])
-        cell.selectionStyle = UITableViewCell.SelectionStyle.none
-        return cell
+            cell.configureCell(offer: offers[indexPath.row])
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            if offers[indexPath.row].wishlistState == 0 {
+                cell.favBTN.setImage(UIImage(named: "Group 258"), for: .normal)
+            }else {
+                cell.favBTN.setImage(UIImage(named: "Group 257"), for: .normal)
+            }
+            return cell
         }else {
             return offerCell()
         }
@@ -146,7 +177,13 @@ extension homeVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return offers.count
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = productDitealVC(nibName: "productDitealVC", bundle: nil)
+        vc.singlItem = offers[indexPath.row]
+        self.navigationController!.pushViewController(vc, animated: true)
+
     }
 }
 
@@ -166,6 +203,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = bannerCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? homeBannerCell {
             cell.configureCell(images: slider[indexPath.row])
+            
             return cell
         }else {
             return homeBannerCell()

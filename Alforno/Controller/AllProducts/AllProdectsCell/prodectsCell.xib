@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="prodectsCell" customModule="Alforno" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="290"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="290"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfB-wg-vMD" customClass="coustomRoundedView" customModule="Alforno" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="274" height="290"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pic 1" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-K9-z30">
+                                <rect key="frame" x="0.0" y="0.0" width="274" height="174"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supreme Special" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-jF-RrP">
+                                <rect key="frame" x="8" y="174" width="258" height="20"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supreme Special Supreme Special Supreme SpecialSupreme Specia Supreme Special Supreme Special Supreme Special Supreme Special" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF8-Ka-AJQ">
+                                <rect key="frame" x="8" y="194" width="258" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supreme Special" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-mY-gAw">
+                                <rect key="frame" x="8" y="242.5" width="258" height="16"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="14"/>
+                                <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPb-Eg-N53">
+                                <rect key="frame" x="231" y="247" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="1Dz-94-yoB"/>
+                                    <constraint firstAttribute="height" constant="35" id="wGg-gF-34o"/>
+                                </constraints>
+                                <state key="normal" image="Group 258"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yF8-Ka-AJQ" firstAttribute="leading" secondItem="dfB-wg-vMD" secondAttribute="leading" constant="8" id="2TL-9m-weO"/>
+                            <constraint firstAttribute="trailing" secondItem="lZx-mY-gAw" secondAttribute="trailing" constant="8" id="Bj0-1W-3Zg"/>
+                            <constraint firstItem="ggV-K9-z30" firstAttribute="top" secondItem="dfB-wg-vMD" secondAttribute="top" id="Bsb-0Y-0yz"/>
+                            <constraint firstAttribute="trailing" secondItem="yF8-Ka-AJQ" secondAttribute="trailing" constant="8" id="DS3-QD-lzq"/>
+                            <constraint firstItem="yF8-Ka-AJQ" firstAttribute="top" secondItem="3le-jF-RrP" secondAttribute="bottom" id="F43-nW-m9w"/>
+                            <constraint firstAttribute="trailing" secondItem="3le-jF-RrP" secondAttribute="trailing" constant="8" id="Fd2-XL-ajl"/>
+                            <constraint firstItem="lZx-mY-gAw" firstAttribute="top" secondItem="yF8-Ka-AJQ" secondAttribute="bottom" constant="8" id="GhW-TN-Kr2"/>
+                            <constraint firstItem="3le-jF-RrP" firstAttribute="top" secondItem="ggV-K9-z30" secondAttribute="bottom" id="Jfe-h1-kGv"/>
+                            <constraint firstItem="lZx-mY-gAw" firstAttribute="leading" secondItem="dfB-wg-vMD" secondAttribute="leading" constant="8" id="KEh-b3-79Y"/>
+                            <constraint firstAttribute="bottom" secondItem="EPb-Eg-N53" secondAttribute="bottom" constant="8" id="Mdr-yL-Tiy"/>
+                            <constraint firstItem="3le-jF-RrP" firstAttribute="leading" secondItem="dfB-wg-vMD" secondAttribute="leading" constant="8" id="Qd8-xl-HCB"/>
+                            <constraint firstAttribute="trailing" secondItem="EPb-Eg-N53" secondAttribute="trailing" constant="8" id="S4g-W2-pYT"/>
+                            <constraint firstItem="ggV-K9-z30" firstAttribute="leading" secondItem="dfB-wg-vMD" secondAttribute="leading" id="asB-So-Ie2"/>
+                            <constraint firstItem="ggV-K9-z30" firstAttribute="height" secondItem="dfB-wg-vMD" secondAttribute="height" multiplier="0.6" id="dpL-Uo-i2m"/>
+                            <constraint firstAttribute="trailing" secondItem="ggV-K9-z30" secondAttribute="trailing" id="lzz-uO-dlX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dfB-wg-vMD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7rb-0X-efM"/>
+                <constraint firstAttribute="trailing" secondItem="dfB-wg-vMD" secondAttribute="trailing" id="CE1-mQ-o0Z"/>
+                <constraint firstAttribute="bottom" secondItem="dfB-wg-vMD" secondAttribute="bottom" id="CMl-cx-a8d"/>
+                <constraint firstItem="dfB-wg-vMD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K7a-Eh-Gan"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="274" height="290"/>
+            <connections>
+                <outlet property="favBTN" destination="EPb-Eg-N53" id="m8C-5L-QPs"/>
+                <outlet property="img" destination="ggV-K9-z30" id="5FH-gx-U7A"/>
+                <outlet property="offerDescripation" destination="yF8-Ka-AJQ" id="lBZ-0Y-yIE"/>
+                <outlet property="price" destination="lZx-mY-gAw" id="6XK-kb-ewB"/>
+                <outlet property="title" destination="3le-jF-RrP" id="VVb-79-qIB"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="231.69642857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Group 258" width="30.5" height="30.5"/>
+        <image name="Pic 1" width="330" height="330"/>
+    </resources>
+</document>

@@ -45,13 +45,23 @@ class homeApi: NSObject {
     
     class func offersApi(completion: @escaping(_ error: Error?,_ success: Bool,_ offer: Offers?)-> Void){
         
+        guard let user_token = helperLogin.getAPIToken() else {
+            completion(nil, false,nil)
+            return
+        }
+        
         let parametars = [
             "lang": "en"
         ]
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(user_token)"
+        ]
+        
         let url = URLs.offersProducts
         print(url)
         print(parametars)
-        AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: nil).responseJSON{ (response) in
+        AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: headers).responseJSON{ (response) in
             switch response.result
             {
             case .failure(let error):

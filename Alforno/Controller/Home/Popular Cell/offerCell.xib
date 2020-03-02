@@ -43,8 +43,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-E7-IrF">
-                                <rect key="frame" x="385" y="8" width="24" height="24"/>
-                                <state key="normal" image="Group 237 no fav"/>
+                                <rect key="frame" x="374" y="13" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="XX4-Ut-y8Y"/>
+                                    <constraint firstAttribute="height" constant="35" id="npi-Pe-vaQ"/>
+                                </constraints>
+                                <state key="normal" image="Group 258"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lc1-pH-dJP">
                                 <rect key="frame" x="172.5" y="117" width="87" height="18"/>
@@ -80,7 +84,7 @@
                             <constraint firstItem="UyS-zz-5M9" firstAttribute="leading" secondItem="I3l-cp-CYO" secondAttribute="trailing" constant="8" id="N6L-Ut-Rho"/>
                             <constraint firstAttribute="bottom" secondItem="I3l-cp-CYO" secondAttribute="bottom" constant="6" id="Omm-W8-nM3"/>
                             <constraint firstItem="I3l-cp-CYO" firstAttribute="top" secondItem="VMI-fj-e4d" secondAttribute="top" constant="6" id="SCg-ZD-81K"/>
-                            <constraint firstItem="UyS-zz-5M9" firstAttribute="top" secondItem="ofH-E7-IrF" secondAttribute="bottom" id="T9L-37-oiu"/>
+                            <constraint firstItem="UyS-zz-5M9" firstAttribute="top" secondItem="ofH-E7-IrF" secondAttribute="bottom" constant="-16" id="T9L-37-oiu"/>
                             <constraint firstItem="vTF-pR-WpR" firstAttribute="centerX" secondItem="6Us-mS-a99" secondAttribute="centerX" id="Xbi-xR-TX2"/>
                             <constraint firstItem="UyS-zz-5M9" firstAttribute="top" secondItem="VMI-fj-e4d" secondAttribute="top" constant="32" id="Y5z-Cl-DJN"/>
                             <constraint firstItem="dmg-Lk-6NM" firstAttribute="top" secondItem="UyS-zz-5M9" secondAttribute="bottom" constant="8" id="YlG-iX-LEu"/>
@@ -107,6 +111,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favBTN" destination="ofH-E7-IrF" id="Pbw-i6-N0e"/>
                 <outlet property="img" destination="I3l-cp-CYO" id="xgP-S6-Sc5"/>
                 <outlet property="offerDescripation" destination="dmg-Lk-6NM" id="gGp-qk-PpI"/>
                 <outlet property="oldPrice" destination="6Us-mS-a99" id="Hrc-QZ-52s"/>
@@ -117,7 +122,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Group 237 no fav" width="24" height="24"/>
+        <image name="Group 258" width="30.5" height="30.5"/>
         <image name="Pic 1" width="330" height="330"/>
     </resources>
 </document>
