@@ -182,6 +182,7 @@ extension homeVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = productDitealVC(nibName: "productDitealVC", bundle: nil)
         vc.singlItem = offers[indexPath.row]
+        vc.isFav = offers[indexPath.row].wishlistState ?? 0
         self.navigationController!.pushViewController(vc, animated: true)
 
     }

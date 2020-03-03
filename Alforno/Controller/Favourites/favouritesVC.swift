@@ -28,6 +28,10 @@ class favouritesVC: UIViewController, NVActivityIndicatorViewable {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        prodeuctsHandelRefresh()
+    }
+    
     func customNB() {
         
         let nvImageTitle = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -52,20 +56,31 @@ class favouritesVC: UIViewController, NVActivityIndicatorViewable {
     
     func prodeuctsHandelRefresh(){
         startAnimating(CGSize(width: 45, height: 45), message: "Loading",type: .ballSpinFadeLoader, color: .red, textColor: .white)
-        favoriteAPI.allProducts{ (error,success,products) in
-            if success {
-                if let products = products{
-                    self.products = products.data ?? []
-                    print(products)
-                    self.allProdectCollectionView.reloadData()
-                    self.stopAnimating()
+        favoriteAPI.allProducts{ (error,networkSuccess,codeSucess,products) in
+            if networkSuccess {
+                if codeSucess {
+                    if products?.status == true {
+                        if let products = products{
+                            self.products = products.data ?? []
+                            print("zzzz\(products)")
+                            self.allProdectCollectionView.reloadData()
+                            self.stopAnimating()
+                        }else {
+                            self.stopAnimating()
+                            self.showAlert(title: "Error", message: "Error favorite")
+                        }
+                    }else {
+                        self.stopAnimating()
+                        self.showAlert(title: "Favorite", message: "Error favorite")
+                    }
                 }else {
                     self.stopAnimating()
+                    self.showAlert(title: "Favorite", message: "Favorite is empty")
                 }
             }else {
                 self.stopAnimating()
+                self.showAlert(title: "Network", message: "Check your network connection")
             }
-            self.stopAnimating()
         }
     }
 }
@@ -103,7 +118,9 @@ extension favouritesVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = productDitealVC(nibName: "productDitealVC", bundle: nil)
+        print("xxxxx")
         vc.singlItem = products[indexPath.row]
+        vc.isFav = 1
         self.navigationController!.pushViewController(vc, animated: true)
     }
 }

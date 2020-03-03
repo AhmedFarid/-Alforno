@@ -112,6 +112,7 @@ extension allProdectsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowL
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = productDitealVC(nibName: "productDitealVC", bundle: nil)
         vc.singlItem = products[indexPath.row]
+        vc.isFav = products[indexPath.row].wishlistState ?? 0
         self.navigationController!.pushViewController(vc, animated: true)
     }
 }

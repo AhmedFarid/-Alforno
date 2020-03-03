@@ -33,27 +33,30 @@ class sideMenuVC: UIViewController {
         self.navigationController!.pushViewController(vc, animated: true)
         dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func cartBTN(_ sender: Any) {
     }
-    
     @IBAction func orderBTN(_ sender: Any) {
     }
-    
     @IBAction func favBTN(_ sender: Any) {
         let vc = favouritesVC(nibName: "favouritesVC", bundle: nil)
         self.navigationController!.pushViewController(vc, animated: true)
         dismiss(animated: true, completion: nil)
     }
     @IBAction func profileBTN(_ sender: Any) {
+        let vc = profileVC(nibName: "profileVC", bundle: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
+        dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func contactUSBTN(_ sender: Any) {
+        let vc = contactUsVC(nibName: "contactUsVC", bundle: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
+        dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func aboutUSBTN(_ sender: Any) {
+        let vc = aboutUsVC(nibName: "aboutUsVC", bundle: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
+        dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func logoutBTN(_ sender: Any) {
         helperLogin.dleteAPIToken()
     }

@@ -23,7 +23,11 @@ struct URLs {
     static let productsCategory = main + "products_category"
     static let listFavoriteProduct = main + "list_favorite_product"
     static let addToFavorits = main + "favorite_product"
-    
+    static let productsAdditions = main + "products_additions"
+    static let about = main + "about"
+    static let contactMessage = main + "contact_message"
+    static let userProfile = main + "user_profile"
+    static let updateProfile = main + "update_profile"
     
     
     

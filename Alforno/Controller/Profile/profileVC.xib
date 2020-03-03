@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="profileVC" customModule="Alforno" customModuleProvider="target">
+            <connections>
+                <outlet property="editBTN" destination="Op0-Xi-vOr" id="inB-Bs-aNz"/>
+                <outlet property="emailAddress" destination="5Oa-VJ-JtU" id="Gvn-A6-t9K"/>
+                <outlet property="fullName" destination="ejo-P3-AsK" id="OfT-SN-TmC"/>
+                <outlet property="phone" destination="BDP-Uo-4Yc" id="87p-IG-Y4p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-Jg-1ez">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-zx-icS">
+                    <rect key="frame" x="61.5" y="44.5" width="291" height="206"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFT-PR-WHf" customClass="coustomRoundedView" customModule="Alforno" customModuleProvider="target">
+                    <rect key="frame" x="16" y="359" width="382" height="208"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Oa-VJ-JtU">
+                            <rect key="frame" x="8" y="142" width="366" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="GI2-SR-TBJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3D-6O-Hh3">
+                            <rect key="frame" x="0.0" y="133" width="382" height="1"/>
+                            <color key="backgroundColor" red="0.85307374609999997" green="0.85307374609999997" blue="0.85307374609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="QYD-72-uQK"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDP-Uo-4Yc">
+                            <rect key="frame" x="8" y="75" width="366" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="a33-9T-KMI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-g0-k6S">
+                            <rect key="frame" x="0.0" y="66" width="382" height="1"/>
+                            <color key="backgroundColor" red="0.85307374609999997" green="0.85307374609999997" blue="0.85307374609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Tjo-6R-kWs"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-P3-AsK">
+                            <rect key="frame" x="8" y="8" width="366" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="PqF-PE-0ia"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Vbt-g0-k6S" firstAttribute="top" secondItem="ejo-P3-AsK" secondAttribute="bottom" constant="8" id="4dS-g8-XIL"/>
+                        <constraint firstItem="ejo-P3-AsK" firstAttribute="top" secondItem="NFT-PR-WHf" secondAttribute="top" constant="8" id="DF2-GP-82G"/>
+                        <constraint firstItem="Vbt-g0-k6S" firstAttribute="leading" secondItem="NFT-PR-WHf" secondAttribute="leading" id="Gct-qY-nWd"/>
+                        <constraint firstItem="ejo-P3-AsK" firstAttribute="leading" secondItem="NFT-PR-WHf" secondAttribute="leading" constant="8" id="H4A-SC-oFJ"/>
+                        <constraint firstAttribute="trailing" secondItem="5Oa-VJ-JtU" secondAttribute="trailing" constant="8" id="LIV-8x-H7K"/>
+                        <constraint firstAttribute="trailing" secondItem="ejo-P3-AsK" secondAttribute="trailing" constant="8" id="Mnq-eE-hwP"/>
+                        <constraint firstItem="BDP-Uo-4Yc" firstAttribute="top" secondItem="Vbt-g0-k6S" secondAttribute="bottom" constant="8" id="PZR-gb-rNr"/>
+                        <constraint firstItem="5Oa-VJ-JtU" firstAttribute="leading" secondItem="NFT-PR-WHf" secondAttribute="leading" constant="8" id="XAI-dW-1ue"/>
+                        <constraint firstAttribute="trailing" secondItem="K3D-6O-Hh3" secondAttribute="trailing" id="Xe7-jk-fQ8"/>
+                        <constraint firstAttribute="trailing" secondItem="BDP-Uo-4Yc" secondAttribute="trailing" constant="8" id="Zbf-UF-sq6"/>
+                        <constraint firstItem="K3D-6O-Hh3" firstAttribute="leading" secondItem="NFT-PR-WHf" secondAttribute="leading" id="a7h-v8-noh"/>
+                        <constraint firstItem="K3D-6O-Hh3" firstAttribute="top" secondItem="BDP-Uo-4Yc" secondAttribute="bottom" constant="8" id="aPY-qv-JrE"/>
+                        <constraint firstAttribute="trailing" secondItem="Vbt-g0-k6S" secondAttribute="trailing" id="bZv-N6-JFv"/>
+                        <constraint firstItem="BDP-Uo-4Yc" firstAttribute="leading" secondItem="NFT-PR-WHf" secondAttribute="leading" constant="8" id="fGn-X7-qf7"/>
+                        <constraint firstAttribute="bottom" secondItem="5Oa-VJ-JtU" secondAttribute="bottom" constant="16" id="hLh-bs-kbR"/>
+                        <constraint firstItem="5Oa-VJ-JtU" firstAttribute="top" secondItem="K3D-6O-Hh3" secondAttribute="bottom" constant="8" id="qCb-64-Bia"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Op0-Xi-vOr" customClass="coustomRoundedButton" customModule="Alforno" customModuleProvider="target">
+                    <rect key="frame" x="103.5" y="599" width="207" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Dgj-ub-wVS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="17"/>
+                    <state key="normal" title="Update">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="editAction:" destination="-1" eventType="touchUpInside" id="kz1-c1-2hi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Op0-Xi-vOr" firstAttribute="top" secondItem="NFT-PR-WHf" secondAttribute="bottom" constant="32" id="341-pT-95v"/>
+                <constraint firstItem="YKA-zx-icS" firstAttribute="centerY" secondItem="ehb-Jg-1ez" secondAttribute="centerY" id="7pB-3s-uvQ"/>
+                <constraint firstItem="ehb-Jg-1ez" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dge-bR-kuY"/>
+                <constraint firstItem="ehb-Jg-1ez" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.329241" id="E0e-7x-LWC"/>
+                <constraint firstItem="ehb-Jg-1ez" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LJM-LU-EGj"/>
+                <constraint firstItem="YKA-zx-icS" firstAttribute="height" secondItem="ehb-Jg-1ez" secondAttribute="height" multiplier="0.698305" id="TaN-2v-hyv"/>
+                <constraint firstItem="NFT-PR-WHf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Zl4-6R-ts8"/>
+                <constraint firstItem="Op0-Xi-vOr" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gb2-fC-ch1"/>
+                <constraint firstItem="NFT-PR-WHf" firstAttribute="top" secondItem="ehb-Jg-1ez" secondAttribute="bottom" constant="64" id="hI4-3A-OwH"/>
+                <constraint firstAttribute="trailing" secondItem="NFT-PR-WHf" secondAttribute="trailing" constant="16" id="iMq-Fe-yeq"/>
+                <constraint firstItem="YKA-zx-icS" firstAttribute="centerX" secondItem="ehb-Jg-1ez" secondAttribute="centerX" id="kF8-Z1-O0v"/>
+                <constraint firstItem="YKA-zx-icS" firstAttribute="width" secondItem="ehb-Jg-1ez" secondAttribute="width" multiplier="0.702899" id="mwZ-4j-qqZ"/>
+                <constraint firstItem="Op0-Xi-vOr" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="ovL-UX-Rpl"/>
+                <constraint firstItem="ehb-Jg-1ez" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="s6g-9g-06J"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Rectangle 5" width="375" height="220"/>
+        <image name="h" width="308" height="206"/>
+    </resources>
+</document>

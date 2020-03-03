@@ -1,60 +1,17 @@
 //
-//  favoriteAPI.swift
+//  userProfileApi.swift
 //  Alforno
 //
-//  Created by Ahmed farid on 3/2/20.
+//  Created by Ahmed farid on 3/3/20.
 //  Copyright © 2020 E-bakers. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-class favoriteAPI: NSObject {
+class userProfileApi: NSObject {
     
-    class func add(product_id: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: addTofav?)-> Void){
-        
-        guard let user_token = helperLogin.getAPIToken() else {
-            completion(nil, false,nil)
-            return
-        }
-        
-        let parametars = [
-            "lang": "en",
-            "product_id": product_id
-        ]
-        
-        let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(user_token)"
-        ]
-        
-        let url = URLs.addToFavorits
-        print(url)
-        print(parametars)
-        
-        AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.queryString, headers: headers).responseJSON{ (response) in
-            switch response.result
-            {
-            case .failure(let error):
-                completion(error, false,nil)
-                print(error)
-            case .success:
-                do{
-                    print(response)
-                    let addFov = try JSONDecoder().decode(addTofav.self, from: response.data!)
-                    if addFov.status == false {
-                        completion(nil,true,addFov)
-                    }else {
-                        completion(nil,true,addFov)
-                    }
-                }catch{
-                    print("error")
-                }
-            }
-        }
-    }
-    
-    
-    class func allProducts(completion: @escaping(_ error: Error?,_ networkSuccess: Bool,_ codeSucess: Bool ,_ favProducts: Offers?)-> Void){
+    class func profile(completion: @escaping(_ error: Error?,_ networkSuccess: Bool,_ codeSucess: Bool ,_ userProfiles: userProfile?)-> Void){
        
         guard let user_token = helperLogin.getAPIToken() else {
             completion(nil, false,false,nil)
@@ -69,7 +26,7 @@ class favoriteAPI: NSObject {
             "Authorization": "Bearer \(user_token)"
         ]
         
-        let url = URLs.listFavoriteProduct
+        let url = URLs.userProfile
         print(url)
         print(parametars)
         AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: headers).responseJSON{ (response) in
@@ -81,11 +38,55 @@ class favoriteAPI: NSObject {
             case .success:
                 do{
                     print(response)
-                    let favProducts = try JSONDecoder().decode(Offers.self, from: response.data!)
-                    if favProducts.status == false {
-                        completion(nil,true,true,favProducts)
+                    let userProfiles = try JSONDecoder().decode(userProfile.self, from: response.data!)
+                    if userProfiles.status == false {
+                        completion(nil,true,true,userProfiles)
                     }else {
-                        completion(nil,true,true,favProducts)
+                        completion(nil,true,true,userProfiles)
+                    }
+                }catch{
+                    print("error")
+                    completion(nil,true,false,nil)
+                }
+            }
+        }
+    }
+    
+    class func upadateProfile(name: String, phone: String,email: String,completion: @escaping(_ error: Error?,_ networkSuccess: Bool,_ codeSucess: Bool ,_ upadteProfiles: editProfiel?)-> Void){
+       
+        guard let user_token = helperLogin.getAPIToken() else {
+            completion(nil, false,false,nil)
+            return
+        }
+        
+        let parametars = [
+            "lang": "en",
+            "name":name,
+            "phone": phone,
+            "email": email
+        ]
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(user_token)"
+        ]
+        
+        let url = URLs.updateProfile
+        print(url)
+        print(parametars)
+        AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: headers).responseJSON{ (response) in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,false,nil)
+                print(error)
+            case .success:
+                do{
+                    print(response)
+                    let userProfiles = try JSONDecoder().decode(editProfiel.self, from: response.data!)
+                    if userProfiles.status == false {
+                        completion(nil,true,true,userProfiles)
+                    }else {
+                        completion(nil,true,true,userProfiles)
                     }
                 }catch{
                     print("error")

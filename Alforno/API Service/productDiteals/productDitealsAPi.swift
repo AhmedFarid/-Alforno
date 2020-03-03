@@ -40,4 +40,35 @@ class productDitealsAPi: NSObject {
             }
         }
     }
+    
+    class func productsAdditions(product_id: String,completion: @escaping(_ error: Error?,_ success: Bool,_ offer: Offers?)-> Void){
+        let parametars = [
+            "lang": "en",
+            "product_id": product_id
+        ]
+        let url = URLs.productsAdditions
+        print(url)
+        print(parametars)
+        AF.request(url, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: nil).responseJSON{ (response) in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,nil)
+                print(error)
+            case .success:
+                do{
+                    print(response)
+                    let offer = try JSONDecoder().decode(Offers.self, from: response.data!)
+                    if offer.status == false {
+                        completion(nil,true,offer)
+                    }else {
+                        completion(nil,true,offer)
+                    }
+                }catch{
+                    print("error")
+                }
+            }
+        }
+    }
 }
+

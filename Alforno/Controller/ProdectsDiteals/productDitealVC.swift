@@ -21,12 +21,15 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var minQtyBTN: UIButton!
     @IBOutlet weak var qtyText: UITextField!
     @IBOutlet weak var viewHight: NSLayoutConstraint!
+    @IBOutlet weak var addtionalTabelView: UITableView!
     
     var singlItem: offfersData?
     var size = [dataSize]()
+    var additonal = [offfersData]()
     var hide:Bool = true
     var qty = 1
-    var isFav = 0
+    var isFav = 1
+    var isSelcete = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,19 +38,40 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
         sizeCollectionView.delegate = self
         sizeCollectionView.dataSource = self
         
-        self.sizeCollectionView.register(UINib.init(nibName: "productSizeCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        addtionalTabelView.delegate = self
+        addtionalTabelView.dataSource = self
         
-        isFav = singlItem?.wishlistState ?? 0
+        self.sizeCollectionView.register(UINib.init(nibName: "productSizeCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        self.addtionalTabelView.register(UINib.init(nibName: "productsAdditionsCell", bundle: nil), forCellReuseIdentifier: "cell")
+        //isFav = singlItem?.wishlistState ?? 0
         
         customNB()
         setUpData()
         sizesHandelRefresh()
+        offersHandelRefresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewHight.constant = imageView.frame.size.height + smallDec.frame.size.height + allDiscr.frame.size.height + 515
+        
     }
     
+    
+    func offersHandelRefresh(){
+        productDitealsAPi.productsAdditions(product_id: "\(singlItem?.id ?? 0)"){ (error,success,additonal) in
+            if success {
+                if let additonal = additonal{
+                    self.additonal = additonal.data ?? []
+                    self.addtionalTabelView.reloadData()
+                    let tabelViewHight:CGFloat = CGFloat((74 * self.additonal.count) + 555)
+                    self.viewHight.constant = self.imageView.frame.size.height + self.smallDec.frame.size.height + self.allDiscr.frame.size.height + tabelViewHight
+                    print(additonal)
+                }else {
+                    
+                }
+            }else {
+            }
+        }
+    }
     
     func setUpData(){
         self.titleProduct.text = singlItem?.title
@@ -75,11 +99,11 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationController?.navigationBar.backItem?.title = ""
         
-        if singlItem?.wishlistState == 0 {
-            let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Group 258"), style: .done, target: self, action: #selector(productDitealVC.addToFav))
+        if isFav == 1 {
+            let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Group 257"), style: .done, target: self, action: #selector(productDitealVC.addToFav))
             self.navigationItem.rightBarButtonItem = rightBarButtonItem
         }else {
-            let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Group 257"), style: .done, target: self, action: #selector(productDitealVC.addToFav))
+            let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Group 258"), style: .done, target: self, action: #selector(productDitealVC.addToFav))
             self.navigationItem.rightBarButtonItem = rightBarButtonItem
         }
     }
@@ -188,5 +212,37 @@ extension productDitealVC: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         return CGSize(width: sizeCollectionView.frame.size.width / 2, height: sizeCollectionView.frame.size.height)
+    }
+}
+
+
+extension productDitealVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return additonal.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = addtionalTabelView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? productsAdditionsCell {
+            cell.configureCell(offer: additonal[indexPath.row])
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            cell.chech = {
+                if self.isSelcete == false{
+                    self.isSelcete = true
+                    cell.chechOutlet.setImage(UIImage(named: "Group 19"), for: .normal)
+                }else {
+                    self.isSelcete = false
+                    cell.chechOutlet.setImage(UIImage(named: "Group 19-1"), for: .normal)
+                }
+            }
+            
+            return cell
+        }else {
+            return productsAdditionsCell()
+        }
     }
 }
