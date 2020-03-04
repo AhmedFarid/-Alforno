@@ -59,6 +59,8 @@
 		6930C65C240D32690018C8B8 /* favouritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6930C65A240D32690018C8B8 /* favouritesVC.xib */; };
 		695AB0A1240D4E8F00D447B3 /* addTofav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695AB0A0240D4E8F00D447B3 /* addTofav.swift */; };
 		695AB0A4240D4FB800D447B3 /* favoriteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695AB0A3240D4FB800D447B3 /* favoriteAPI.swift */; };
+		69DBBD8F240FFBF1002DF28C /* cartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DBBD8E240FFBF1002DF28C /* cartApi.swift */; };
+		69DBBD92240FFC4C002DF28C /* cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DBBD91240FFC4C002DF28C /* cart.swift */; };
 		69ECA4D7240E8AF000DB28C9 /* productsAdditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECA4D5240E8AF000DB28C9 /* productsAdditionsCell.swift */; };
 		69ECA4D8240E8AF000DB28C9 /* productsAdditionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ECA4D6240E8AF000DB28C9 /* productsAdditionsCell.xib */; };
 		69ECA4DC240EA20000DB28C9 /* aboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECA4DA240EA20000DB28C9 /* aboutUsVC.swift */; };
@@ -137,6 +139,8 @@
 		6930C65A240D32690018C8B8 /* favouritesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favouritesVC.xib; sourceTree = "<group>"; };
 		695AB0A0240D4E8F00D447B3 /* addTofav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTofav.swift; sourceTree = "<group>"; };
 		695AB0A3240D4FB800D447B3 /* favoriteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteAPI.swift; sourceTree = "<group>"; };
+		69DBBD8E240FFBF1002DF28C /* cartApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartApi.swift; sourceTree = "<group>"; };
+		69DBBD91240FFC4C002DF28C /* cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cart.swift; sourceTree = "<group>"; };
 		69ECA4D5240E8AF000DB28C9 /* productsAdditionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productsAdditionsCell.swift; sourceTree = "<group>"; };
 		69ECA4D6240E8AF000DB28C9 /* productsAdditionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = productsAdditionsCell.xib; sourceTree = "<group>"; };
 		69ECA4DA240EA20000DB28C9 /* aboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutUsVC.swift; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 		6924D7D823FC11E100D4494A /* API Service */ = {
 			isa = PBXGroup;
 			children = (
+				69DBBD8D240FFB87002DF28C /* Cart */,
 				69ECA4F2240EC47200DB28C9 /* userProfile */,
 				69ECA4EC240EBE7B00DB28C9 /* contactUs */,
 				69ECA4E1240EA61300DB28C9 /* about */,
@@ -404,6 +409,7 @@
 		6924D7DB23FC120700D4494A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69DBBD90240FFC31002DF28C /* Cart */,
 				69ECA4EF240EC42700DB28C9 /* Profile */,
 				69ECA4E9240EBD4D00DB28C9 /* contactMessage */,
 				69ECA4DE240EA54B00DB28C9 /* AboutUs */,
@@ -510,6 +516,22 @@
 				695AB0A3240D4FB800D447B3 /* favoriteAPI.swift */,
 			);
 			path = favorite;
+			sourceTree = "<group>";
+		};
+		69DBBD8D240FFB87002DF28C /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				69DBBD8E240FFBF1002DF28C /* cartApi.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		69DBBD90240FFC31002DF28C /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				69DBBD91240FFC4C002DF28C /* cart.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		69ECA4D2240E8A7400DB28C9 /* productsAdditions */ = {
@@ -777,11 +799,13 @@
 				6922086F240BB9CE006B1054 /* productDitelas.swift in Sources */,
 				6924D7ED23FC3B8000D4494A /* coustomRoundedView.swift in Sources */,
 				69ECA4DC240EA20000DB28C9 /* aboutUsVC.swift in Sources */,
+				69DBBD92240FFC4C002DF28C /* cart.swift in Sources */,
 				692880732407FE29000F4267 /* productDitealVC.swift in Sources */,
 				69ECA4F1240EC43800DB28C9 /* userProfile.swift in Sources */,
 				6914777E2406A0A500B691EA /* Auth.swift in Sources */,
 				69ECA4E0240EA55E00DB28C9 /* about.swift in Sources */,
 				691477842406B14300B691EA /* registerApi.swift in Sources */,
+				69DBBD8F240FFBF1002DF28C /* cartApi.swift in Sources */,
 				69ECA4E7240EB5C800DB28C9 /* contactUsVC.swift in Sources */,
 				69ECA4EB240EBD8700DB28C9 /* contactUs.swift in Sources */,
 				69FFCA1323FD7BC700F10AD2 /* homeVC.swift in Sources */,

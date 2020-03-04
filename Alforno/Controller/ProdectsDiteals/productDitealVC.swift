@@ -22,14 +22,20 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var qtyText: UITextField!
     @IBOutlet weak var viewHight: NSLayoutConstraint!
     @IBOutlet weak var addtionalTabelView: UITableView!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var singlItem: offfersData?
     var size = [dataSize]()
     var additonal = [offfersData]()
+    var additonalId = [Int]()
+    var additonaIdsString = String()
     var hide:Bool = true
     var qty = 1
     var isFav = 1
     var isSelcete = false
+    var price = 0
+    var additonals = 0
+    var selectedSize: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +46,9 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
         
         addtionalTabelView.delegate = self
         addtionalTabelView.dataSource = self
+        
+        addtionalTabelView.allowsMultipleSelection = true
+        addtionalTabelView.allowsMultipleSelectionDuringEditing = true
         
         self.sizeCollectionView.register(UINib.init(nibName: "productSizeCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         self.addtionalTabelView.register(UINib.init(nibName: "productsAdditionsCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -62,7 +71,7 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
                 if let additonal = additonal{
                     self.additonal = additonal.data ?? []
                     self.addtionalTabelView.reloadData()
-                    let tabelViewHight:CGFloat = CGFloat((74 * self.additonal.count) + 555)
+                    let tabelViewHight:CGFloat = CGFloat((74 * self.additonal.count) + 600)
                     self.viewHight.constant = self.imageView.frame.size.height + self.smallDec.frame.size.height + self.allDiscr.frame.size.height + tabelViewHight
                     print(additonal)
                 }else {
@@ -143,6 +152,10 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
                 self.size = size.data ?? []
                 print(size)
                 self.sizeCollectionView.reloadData()
+                self.priceLabel.text = "\((Int(self.size[0].price ?? "0") ?? 1) * self.qty + self.additonals)"
+                self.price = Int(self.size[0].price ?? "0") ?? 0
+                self.sizeCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+                //self..selectItem(at: 0, animated: true, scrollPosition: UICollectionViewScrollPosition(rawValue: 0))
                 self.stopAnimating()
             }
         }
@@ -150,8 +163,10 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
     
     @IBAction func minQtyAction(_ sender: Any) {
         qty = qty - 1
+        self.priceLabel.text = "\((self.price + self.additonals) * self.qty)"
         self.qtyText.text = "\(qty)"
         if qty == 1 {
+            
             minQtyBTN.isHidden = true
         }else {
             minQtyBTN.isHidden = false
@@ -160,6 +175,7 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
     
     @IBAction func pluseQtyAction(_ sender: Any) {
         qty = qty + 1
+        self.priceLabel.text = "\((self.price + self.additonals) * self.qty)"
         self.qtyText.text = "\(qty)"
         if qty == 1 {
             minQtyBTN.isHidden = true
@@ -169,24 +185,26 @@ class productDitealVC: UIViewController,NVActivityIndicatorViewable {
         
     }
     
-}
-
-
-extension productDitealVC: UIScrollViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        if(velocity.y>0) {
-            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
-            UIView.animate(withDuration: 1.0, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-                self.hide = false
-            }, completion: nil)
-            
-        } else {
-            UIView.animate(withDuration: 1.0, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                self.hide = true
-            }, completion: nil)
+    @IBAction func addToCartBTN(_ sender: Any) {
+        var extra = ""
+        additonaIdsString = ""
+        if additonalId.count == 0{
+            extra = ""
+        }else{
+            for item in 0...additonalId.count - 1{
+                self.additonaIdsString.append(contentsOf: "\(additonalId[item]),")
+            }
+            extra = String(additonaIdsString.dropLast())
+        }
+        startAnimating(CGSize(width: 45, height: 45), message: "Loading...",type: .ballSpinFadeLoader, color: .red, textColor: .white)
+        cartApi.addCarts(product_id: "\(singlItem?.id ?? 0)", product_quantity: "\(qty)", size_id: "\(selectedSize ?? self.size[0].id ?? 0)", addition_id: extra){ (error, success, addTofav) in
+            if success {
+                self.stopAnimating()
+                self.showAlert(title: "contact us", message: addTofav?.data ?? "")
+            }else {
+                self.showAlert(title: "contact us", message: "Check your network")
+                self.stopAnimating()
+            }
         }
     }
 }
@@ -196,11 +214,9 @@ extension productDitealVC: UICollectionViewDelegate, UICollectionViewDataSource,
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return size.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = sizeCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? productSizeCell{
             cell.configureCell(sizes: size[indexPath.row])
@@ -209,9 +225,13 @@ extension productDitealVC: UICollectionViewDelegate, UICollectionViewDataSource,
             return productSizeCell()
         }
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.price = Int(size[indexPath.row].price ?? "0") ?? 0
+        self.priceLabel.text = "\((price + additonals) * qty)"
+        self.selectedSize = size[indexPath.row].id
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: sizeCollectionView.frame.size.width / 2, height: sizeCollectionView.frame.size.height)
+        return CGSize(width: sizeCollectionView.frame.size.width / 2.02, height: sizeCollectionView.frame.size.height)
     }
 }
 
@@ -230,19 +250,33 @@ extension productDitealVC: UITableViewDelegate, UITableViewDataSource {
         if let cell = addtionalTabelView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? productsAdditionsCell {
             cell.configureCell(offer: additonal[indexPath.row])
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
-            cell.chech = {
-                if self.isSelcete == false{
-                    self.isSelcete = true
-                    cell.chechOutlet.setImage(UIImage(named: "Group 19"), for: .normal)
-                }else {
-                    self.isSelcete = false
-                    cell.chechOutlet.setImage(UIImage(named: "Group 19-1"), for: .normal)
-                }
-            }
-            
             return cell
         }else {
             return productsAdditionsCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !additonalId.contains(additonal[indexPath.row].id ?? 0){
+            additonalId.append(additonal[indexPath.row].id ?? 0)
+            self.additonals += Int(self.additonal[indexPath.row].priceGeneral ?? "0") ?? 0
+            self.priceLabel.text = "\((self.price + self.additonals) * self.qty)"
+        }
+        print(additonalId)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        var currentIndex = 0
+        for id in additonalId{
+            if id == additonal[indexPath.row].id {
+                additonalId.remove(at: currentIndex)
+                self.additonals -= Int(self.additonal[indexPath.row].priceGeneral ?? "0") ?? 0
+                self.priceLabel.text = "\((self.price + self.additonals) * self.qty)"
+                break
+            }
+            currentIndex += 1
+        }
+        print(additonalId)
     }
 }

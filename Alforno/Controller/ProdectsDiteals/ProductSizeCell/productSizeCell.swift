@@ -14,12 +14,6 @@ class productSizeCell: UICollectionViewCell {
     @IBOutlet weak var sizeImage: UIImageView!
     @IBOutlet weak var sizePrice: UILabel!
     
-    override func awakeFromNib() {
-        
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     override var isSelected: Bool {
         didSet{
             sizeImage.image =  isSelected ? UIImage(named: "Group 253-1") : UIImage(named: "Group 6")
@@ -30,7 +24,7 @@ class productSizeCell: UICollectionViewCell {
     
     func configureCell(sizes: dataSize){
            sizeName.text = sizes.size
-           sizePrice.text = sizes.salePrice
+           sizePrice.text = sizes.price
        }
 
 }

@@ -28,6 +28,7 @@ struct URLs {
     static let contactMessage = main + "contact_message"
     static let userProfile = main + "user_profile"
     static let updateProfile = main + "update_profile"
+    static let addCart = main + "add_cart"
     
     
     

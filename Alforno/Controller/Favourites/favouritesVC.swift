@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import SideMenu
 
 class favouritesVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -21,7 +22,7 @@ class favouritesVC: UIViewController, NVActivityIndicatorViewable {
         
         allProdectCollectionView.delegate = self
         allProdectCollectionView.dataSource = self
-        customNB()
+        setUpNav()
         prodeuctsHandelRefresh()
         
         self.allProdectCollectionView.register(UINib.init(nibName: "prodectsCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -32,21 +33,28 @@ class favouritesVC: UIViewController, NVActivityIndicatorViewable {
         prodeuctsHandelRefresh()
     }
     
-    func customNB() {
-        
+    func setUpNav() {
         let nvImageTitle = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         nvImageTitle.contentMode = .scaleAspectFit
         let imageName = UIImage(named: "XMLID_1_")
         nvImageTitle.image = imageName
         navigationItem.titleView = nvImageTitle
         
-        let backImage = UIImage(named: "BACK-1")
-        self.navigationController?.navigationBar.backIndicatorImage = backImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-        self.navigationController?.navigationBar.backItem?.title = ""
+        let leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "menu-1"), style: .done, target: self, action: #selector(aboutUsVC.sideMenu))
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem
         
-        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "bag nav"), style: .done, target: self, action: #selector(favouritesVC.showCart))
+        
+        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "bag nav"), style: .done, target: self, action: #selector(aboutUsVC.showCart))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+    }
+    
+    @objc func sideMenu() {
+        let menu = UIStoryboard(name: "sideMenu", bundle: nil).instantiateViewController(withIdentifier: "RightMenu") as! SideMenuNavigationController
+        menu.presentationStyle = .menuSlideIn
+        menu.menuWidth = view.frame.size.width - 50
+        
+        present(menu, animated: true, completion: nil)
     }
     
     @objc func showCart() {
